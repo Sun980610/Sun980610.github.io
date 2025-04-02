@@ -1,5 +1,5 @@
 ---
-title: "파일 접근 권한이 없어요"
+title: "파일 접근 권한 문제"
 layout: single
 sidebar:
   nav: "category-nav"
@@ -7,8 +7,6 @@ permalink: _pages/mi/server/troubleshooting/
 nav_order: 3
 ---
 
-
-# 파일 접근 권한 문제
 
 서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.
 
