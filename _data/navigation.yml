@@ -14,27 +14,33 @@ main:
 category-nav:
   - title: "Server Configuration"
     children:
-      - title: "Initial Ubuntu Setup"
-        url: /_pages/mi/server/ubuntu-setup/
-      - title: "User Permission Management"
-        url: /_pages/mi/server/user-management/
+      - title: "Server Setup"
+        url: /categories/category-server-setup.md/
+      - title: "User Management"
+        url: /categories/category-server-user.md/
       - title: "Troubleshooting"
-        url: /_pages/mi/server/troubleshooting/
-  - title: "Microbiome Analysis"
+        url: /categories/category-server-troubleshooting.md/
+  - title: "Bio-informatics"
     children:
+      - title: "Basic concepts"
+        url: /categories/category-informatics-ready.md/
       - title: "Microbiome Analysis"
-        url: /_pages/mi/microbiome/
-      - title: "Data processing"
-        url: /_pages/mi/microbiome/processing/
+        url: /categories/category-informatics-microbiome.md/
       - title: "Multi-omics Integration"
-        url: /_pages/mi/microbiome/multi-omics/
+        url: /categories/category-informatics-multiomics.md/
   - title: "Statistical Analysis"
     children:
       - title: "Background"
-        url: /_pages/mi/statistic/background/
-      - title: "Microbiome"
-        url: /_pages/mi/statistic/microbiome/
-      - title: "Metabolites"
-        url: /_pages/mi/statistic/metabolites/
-      - title: "Muiti-omics"
-        url: /_pages/mi/statistic/multi-omics/
+        url: /categories/category-statistics-background.md/
+      - title: "Basic R"
+        url: /categories/category-statistics-basicR.md/
+      - title: "Microbiome R"
+        url: /categories/category-statistics-microbiomeR.md/
+      - title: "Metabolites R"
+        url: /categories/category-statistics-metabolitesR.md/
+      - title: "etc"
+        url: /categories/category-statistics-etc.md/
+  - title: "SUN"
+    children:
+      - title: "Travel"
+        url: /categories/category-sun-travel.md/
