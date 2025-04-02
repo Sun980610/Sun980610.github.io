@@ -1,5 +1,5 @@
 ---
-title: "본체 부팅이 안돼요"
+title: "본체 부팅 오류"
 layout: single
 sidebar:
   nav: "category-nav"
@@ -7,8 +7,6 @@ permalink: _pages/mi/server/troubleshooting/
 nav_order: 6
 ---
 
-
-# 부팅 또는 로딩 오류
 
 서버 전원을 켰을 때 운영체제가 정상적으로 부팅되지 않거나, 부팅 도중 멈추는 경우가 발생할 수 있습니다. 
 
