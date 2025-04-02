@@ -13,11 +13,13 @@ search: false
 ---
 ---
 
-@import "minimal-mistakes"; // 기존 테마 스타일 불러오기
+@import "minimal-mistakes"; 
 
-/* 사이드바를 좌측으로 이동 */
-.sidebar__right {
+.page__sidebar {
   float: left;
+  width: 250px;
   margin-right: 2em;
-  margin-left: 0;
+}
+.page__content {
+  margin-left: 270px;
 }
