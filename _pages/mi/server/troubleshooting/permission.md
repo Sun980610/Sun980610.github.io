@@ -3,7 +3,7 @@ title: "파일 접근 권한 문제"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: _pages/mi/server/troubleshooting/
+permalink: /_pages/mi/server/troubleshooting/
 categories:
   - server-troubleshooting
 ---
