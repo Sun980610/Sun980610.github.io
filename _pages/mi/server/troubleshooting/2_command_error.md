@@ -1,5 +1,5 @@
 ---
-title: "특정 명령어가 작동하지 않아요"
+title: "명령어 작동 문제"
 layout: single
 sidebar:
   nav: "category-nav"
