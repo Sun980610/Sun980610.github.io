@@ -1,0 +1,22 @@
+// 기본 본문 글자 크기: 11pt = 약 14.67px
+body {
+  font-size: 14.67px;
+  line-height: 1.6;
+}
+
+// 제목 크기 조정
+h1, h2, h3, h4, h5, h6 {
+  font-size: 21.33px;
+  font-weight: bold;
+}
+
+// 강조 텍스트
+strong, b {
+  font-size: 18.67px;
+  font-weight: bold;
+}
+
+// 참고 상자나 알림 상자에도 강조 크기 적용
+.notice, .highlight {
+  font-size: 18.67px;
+}
