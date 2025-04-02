@@ -3,7 +3,7 @@ title: "프로세스 중단 문제"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: _pages/mi/server/troubleshooting/
+permalink: /_pages/mi/server/troubleshooting/
 categories:
   - server-troubleshooting
 ---
