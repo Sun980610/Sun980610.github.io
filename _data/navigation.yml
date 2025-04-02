@@ -15,26 +15,26 @@ category-nav:
   - title: "Server Configuration"
     children:
       - title: "Initial Ubuntu Setup"
-        url: /mi/server/ubuntu-setup/
+        url: /_pages/mi/server/ubuntu-setup/
       - title: "User Permission Management"
-        url: /mi/server/user-management/
+        url: /_pages/mi/server/user-management/
       - title: "Troubleshooting"
-        url: /mi/server/user-management/
+        url: /_pages/mi/server/user-management/
   - title: "Microbiome Analysis"
     children:
       - title: "Microbiome Analysis"
-        url: /mi/microbiome/
+        url: /_pages/mi/microbiome/
       - title: "Data processing"
-        url: /mi/microbiome/processing/
+        url: /_pages/mi/microbiome/processing/
       - title: "Multi-omics Integration"
-        url: /mi/microbiome/multi-omics/
+        url: /_pages/mi/microbiome/multi-omics/
   - title: "Statistical Analysis"
     children:
       - title: "Background"
-        url: /mi/statistic/background/
+        url: /_pages/mi/statistic/background/
       - title: "Microbiome"
-        url: /mi/statistic/microbiome/
+        url: /_pages/mi/statistic/microbiome/
       - title: "Metabolites"
-        url: /mi/statistic/metabolites/
+        url: /_pages/mi/statistic/metabolites/
       - title: "Muiti-omics"
-        url: /mi/statistic/multi-omics/
+        url: /_pages/mi/statistic/multi-omics/
