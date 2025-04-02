@@ -3,7 +3,8 @@ title: "Initial Ubuntu Setup"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: /mi/server/ubuntu-setup/
+permalink: _pages/mi/server/ubuntu-setup/
+nav_order: 2
 ---
 
 # Initial Ubuntu Setup
