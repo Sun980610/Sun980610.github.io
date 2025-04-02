@@ -4,6 +4,7 @@ layout: single
 permalink: /categories/
 ---
 
+#MI
 
 ## Server Configuration
 
@@ -23,3 +24,9 @@ permalink: /categories/
 - [Microbiome](/_pages/mi/statistic/microbiome/)
 - [Metabolites](/_pages/mi/statistic/metabolites/)
 - [Multi-omics](/_pages/mi/statistic/multi-omics/)
+
+
+
+#SUN
+
+- [Travel](/_pages/SUN/travel/)
