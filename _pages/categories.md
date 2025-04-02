@@ -4,7 +4,6 @@ layout: single
 permalink: /categories/
 ---
 
-# Categories
 
 ## Server Configuration
 
