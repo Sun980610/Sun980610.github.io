@@ -15,32 +15,32 @@ category-nav:
   - title: "Server Configuration"
     children:
       - title: "Server Setup"
-        url: /_pages/categories/category-server-setup/
+        url: /categories/server-setup/
       - title: "User Management"
-        url: /_pages/categories/category-server-user/
+        url: /categories/server-user/
       - title: "Troubleshooting"
-        url: /categories/category-server-troubleshooting/
+        url: /categories/server-troubleshooting/
   - title: "Bio-informatics"
     children:
       - title: "Basic concepts"
-        url: /_pages/categories/category-informatics-ready/
+        url: /categories/informatics-ready/
       - title: "Microbiome Analysis"
-        url: /_pages/categories/category-informatics-microbiome/
+        url: /categories/informatics-microbiome/
       - title: "Multi-omics Integration"
-        url: /_pages/categories/category-informatics-multiomics/
+        url: /categories/informatics-multiomics/
   - title: "Statistical Analysis"
     children:
       - title: "Background"
-        url: /_pages/categories/category-statistics-background/
+        url: /categories/statistics-background/
       - title: "Basic R"
-        url: /_pages/categories/category-statistics-basicR/
+        url: /categories/statistics-basicR/
       - title: "Microbiome R"
-        url: /_pages/categories/category-statistics-microbiomeR/
+        url: /categories/statistics-microbiomeR/
       - title: "Metabolites R"
-        url: /_pages/categories/category-statistics-metabolitesR/
+        url: /categories/statistics-metabolitesR/
       - title: "etc"
-        url: /_pages/categories/category-statistics-etc/
+        url: /categories/statistics-etc/
   - title: "SUN"
     children:
       - title: "Travel"
-        url: /_pages/categories/category-sun-travel/
+        url: /categories/sun-travel/
