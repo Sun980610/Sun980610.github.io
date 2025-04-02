@@ -3,7 +3,7 @@ title: "네트워크 오류"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: _pages/mi/server/troubleshooting/
+permalink: /_pages/mi/server/troubleshooting/
 categories:
   - server-troubleshooting
 ---
