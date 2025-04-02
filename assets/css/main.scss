@@ -8,16 +8,3 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-
-
----
----
-
-@import "minimal-mistakes";
-
-/* 여기에 사용자 정의 CSS 작성 */
-.sidebar__right {
-  float: left;
-  margin-right: 2em;
-  margin-left: 0;
-}
