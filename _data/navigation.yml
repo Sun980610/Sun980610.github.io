@@ -4,9 +4,9 @@ main:
   - title: "Home"
     url: /
   - title: "About"
-    url: /about/
+    url: /_pages/about/
   - title: "Categories"
-    url: /_pages/
+    url: /_pages/category/
   - title: "Tags"
     url: /tags/
 
