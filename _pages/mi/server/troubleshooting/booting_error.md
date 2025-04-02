@@ -3,7 +3,7 @@ title: "본체 부팅 오류"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: _pages/mi/server/troubleshooting/
+permalink: /mi/server/troubleshooting/
 categories:
   - server-troubleshooting
 ---
