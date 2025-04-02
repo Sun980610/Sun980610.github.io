@@ -6,19 +6,19 @@ permalink: /categories/
 
 # Categories
 
-## 📁 Server Configuration
+## Server Configuration
 
 - [Initial Ubuntu Setup](/_pages/mi/server/ubuntu-setup/)
 - [User Permission Management](/_pages/mi/server/user-management/)
 - [Troubleshooting](/_pages/mi/server/troubleshooting/)
 
-## 📁 Microbiome Analysis
+## Microbiome Analysis
 
 - [Overview](/_pages/mi/microbiome/)
 - [Data Processing](/_pages/mi/microbiome/processing/)
 - [Multi-omics Integration](/_pages/mi/microbiome/multi-omics/)
 
-## 📁 Statistical Analysis
+## Statistical Analysis
 
 - [Background](/_pages/mi/statistic/background/)
 - [Microbiome](/_pages/mi/statistic/microbiome/)
