@@ -6,7 +6,6 @@ sidebar:
 permalink: _pages/mi/server/troubleshooting/
 categories:
   - server-troubleshooting
-nav_order: 6
 ---
 
 
