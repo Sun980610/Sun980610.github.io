@@ -1,5 +1,5 @@
 ---
-title: "프로세스가 멈춰요"
+title: "프로세스 중단 문제"
 layout: single
 sidebar:
   nav: "category-nav"
