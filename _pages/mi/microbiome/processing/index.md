@@ -3,9 +3,10 @@ title: "Microbiome Analysis"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: _pages/mi/microbiome/processing
+permalink: _pages/mi/microbiome/processing/
 nav_order: 1
 ---
+
 
 # Microbiome Analysis
 
