@@ -15,32 +15,32 @@ category-nav:
   - title: "Server Configuration"
     children:
       - title: "Server Setup"
-        url: /categories/server-setup/
+        url: /mi/
       - title: "User Management"
-        url: /categories/server-user/
+        url: /mi/
       - title: "Troubleshooting"
         url: /mi/
   - title: "Bio-informatics"
     children:
       - title: "Basic concepts"
-        url: /categories/informatics-ready/
+        url: /mi/
       - title: "Microbiome Analysis"
-        url: /categories/informatics-microbiome/
+        url: /mi/
       - title: "Multi-omics Integration"
-        url: /categories/informatics-multiomics/
+        url: /mi/
   - title: "Statistical Analysis"
     children:
       - title: "Background"
-        url: /categories/statistics-background/
+        url: /mi/
       - title: "Basic R"
-        url: /categories/statistics-basicR/
+        url: /mi/
       - title: "Microbiome R"
-        url: /categories/statistics-microbiomeR/
+        url: /mi/
       - title: "Metabolites R"
-        url: /categories/statistics-metabolitesR/
+        url: /mi/
       - title: "etc"
-        url: /categories/statistics-etc/
+        url: /mi/
   - title: "SUN"
     children:
       - title: "Travel"
-        url: /categories/sun-travel/
+        url: /SUN/
