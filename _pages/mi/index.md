@@ -1,5 +1,5 @@
 ---
-title: "MI 글 모음"
+title: "MI"
 layout: home
 permalink: /mi/
 pagination:
