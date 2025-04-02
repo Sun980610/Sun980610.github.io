@@ -1,5 +1,5 @@
 ---
-title: "외부에서 SSH 접근이 안돼요"
+title: "외부에서 서버 접근 불가"
 layout: single
 sidebar:
   nav: "category-nav"
@@ -7,8 +7,6 @@ permalink: _pages/mi/server/troubleshooting/
 nav_order: 5
 ---
 
-
-# 외부 서버 접근 불가
 
 다른 컴퓨터에서 서버에 접속(RStudio Server, SSH 등)할 수 없는 경우, 네트워크 설정이나 서비스 상태, 포트 개방 여부 등을 확인해야 합니다.
 
