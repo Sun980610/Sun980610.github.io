@@ -317,9 +317,11 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
       layout: single
+      sidebar:
+        nav: "category-nav"
       author_profile: true
       read_time: true
       comments: # true
