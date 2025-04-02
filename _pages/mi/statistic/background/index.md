@@ -1,9 +1,10 @@
 ---
-title: "Microbiome Analysis"
+title: "Statistics"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: /mi/microbiome/
+permalink: _pages/mi/statistic/
+nav_order: 3
 ---
 
 # Microbiome Analysis
