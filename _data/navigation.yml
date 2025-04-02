@@ -19,7 +19,7 @@ category-nav:
       - title: "User Permission Management"
         url: /_pages/mi/server/user-management/
       - title: "Troubleshooting"
-        url: /_pages/mi/server/user-management/
+        url: /_pages/mi/server/troubleshooting/
   - title: "Microbiome Analysis"
     children:
       - title: "Microbiome Analysis"
