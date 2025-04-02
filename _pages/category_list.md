@@ -1,5 +1,5 @@
 ---
-title: "Categories"
+title: "Category_list"
 layout: single
 permalink: /category_list/
 ---
