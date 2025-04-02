@@ -15,11 +15,11 @@ category-nav:
   - title: "Server Configuration"
     children:
       - title: "Server Setup"
-        url: /_pages/categories/category-server-setup/
+        url: /_pages/categories/server-setup/
       - title: "User Management"
-        url: /_pages/categories/category-server-user/
+        url: /_pages/categories/server-user/
       - title: "Troubleshooting"
-        url: /_pages/categories/category-server-troubleshooting/
+        url: /categories/server-troubleshooting/
   - title: "Bio-informatics"
     children:
       - title: "Basic concepts"
