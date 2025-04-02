@@ -4,7 +4,8 @@ layout: single
 permalink: /categories/
 ---
 
-#MI
+
+# MI
 
 ## Server Configuration
 
@@ -27,6 +28,6 @@ permalink: /categories/
 
 
 
-#SUN
+# SUN
 
 - [Travel](/_pages/SUN/travel/)
