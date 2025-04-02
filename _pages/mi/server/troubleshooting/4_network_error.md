@@ -4,7 +4,8 @@ layout: single
 sidebar:
   nav: "category-nav"
 permalink: _pages/mi/server/troubleshooting/
-categories: server-troubleshooting
+categories:
+  - server-troubleshooting
 nav_order: 4
 ---
 
