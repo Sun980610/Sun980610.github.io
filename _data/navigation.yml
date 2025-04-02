@@ -6,7 +6,7 @@ main:
   - title: "About"
     url: /_pages/about/
   - title: "Categories"
-    url: /_pages/mi/
+    url: /_pages/categories.md/
   - title: "Tags"
     url: /tags/
 
