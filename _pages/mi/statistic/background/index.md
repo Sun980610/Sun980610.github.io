@@ -3,8 +3,8 @@ title: "Statistics"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: _pages/mi/statistic/
-nav_order: 3
+permalink: _pages/mi/statistic/background/
+nav_order: 1
 ---
 
 # Microbiome Analysis
