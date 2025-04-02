@@ -19,7 +19,7 @@ category-nav:
       - title: "User Management"
         url: /categories/server-user/
       - title: "Troubleshooting"
-        url: /categories/server-troubleshooting/
+        url: /mi/
   - title: "Bio-informatics"
     children:
       - title: "Basic concepts"
