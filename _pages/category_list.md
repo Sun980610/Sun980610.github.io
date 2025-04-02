@@ -1,7 +1,7 @@
 ---
 title: "Categories"
 layout: single
-permalink: /categories/
+permalink: /category_list/
 ---
 
 
