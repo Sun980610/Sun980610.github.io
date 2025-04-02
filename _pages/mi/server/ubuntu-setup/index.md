@@ -4,7 +4,7 @@ layout: single
 sidebar:
   nav: "category-nav"
 permalink: _pages/mi/server/ubuntu-setup/
-nav_order: 2
+nav_order: 1
 ---
 
 # Initial Ubuntu Setup
