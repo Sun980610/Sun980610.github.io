@@ -100,4 +100,22 @@ var store = [{
         "tags": [],
         "url": "/mi/statistics/microbiomeR/",
         "teaser": null
-      },]
+      },,{
+    "title": "About",
+    "excerpt":"이 블로그는 마이크로바이옴 분석을 중심으로 운영됩니다.  ","url": "/about/"
+  },{
+    "title": "All Categories",
+    "excerpt":" ","url": "/categories/"
+  },{
+    "title": "Category",
+    "excerpt":" Server Configuration           Server Setup        User Management        Troubleshooting      Bio-informatics           Background        Microbiome Analysis        Multi-omics Integration      Statistical Analysis           Background        Basic R        Microbiome R        Metabolites R        etc      SUN           Travel      ","url": "/category_list/"
+  },{
+    "title": "travel",
+    "excerpt":"travel   my own page  ","url": "/SUN/travel/"
+  },{
+    "title": "SUN 글 모음",
+    "excerpt":" ","url": "/SUN/"
+  },{
+    "title": "SUN_mi",
+    "excerpt":"SUN PARK   Mucosal Immunology  ","url": "/"
+  }]
