@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>파일 접근 권한 문제 - SUN_mi</title>
-<meta name="description" content="서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.">
+<!-- begin _includes/seo.html --><title>Server User - SUN_mi</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="SUN PARK">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SUN_mi">
-<meta property="og:title" content="파일 접근 권한 문제">
-<meta property="og:url" content="/mi/server/troubleshooting/permission/">
+<meta property="og:title" content="Server User">
+<meta property="og:url" content="/mi/server/user/">
 
 
-  <meta property="og:description" content="서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.">
+  <meta property="og:description" content="">
 
 
 
@@ -46,7 +46,7 @@
   
 
 
-<link rel="canonical" href="/mi/server/troubleshooting/permission/">
+<link rel="canonical" href="/mi/server/user/">
 
 
 
@@ -180,7 +180,7 @@
             
               <li><a href="/mi/server/setup/">Server Setup</a></li>
             
-              <li><a href="/mi/server/user/">User Management</a></li>
+              <li><a href="/mi/server/user/" class="active">User Management</a></li>
             
               <li><a href="/mi/server/troubleshooting/">Troubleshooting</a></li>
             
@@ -253,8 +253,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="파일 접근 권한 문제">
-    <meta itemprop="description" content="서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.">
+    <meta itemprop="headline" content="Server User">
+    <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2025-04-03T03:27:48+00:00">
     
 
@@ -262,7 +262,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="/mi/server/troubleshooting/permission/" itemprop="url">파일 접근 권한 문제
+            <a href="/mi/server/user/" itemprop="url">Server User
 </a>
           </h1>
           
@@ -273,54 +273,35 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.</p>
-
-<h2 id="원인">원인</h2>
-
+        
 <ul>
-  <li>사용자가 해당 파일에 대한 읽기, 쓰기, 실행 권한을 가지고 있지 않음</li>
-  <li>그룹 설정이 잘못되어 있음</li>
-  <li>루트 계정 소유 파일을 일반 사용자가 접근하려는 경우</li>
+  
+    
+      <li><a href="/mi/server/troubleshooting/SSH-error/">외부에서 서버 접근 불가</a></li>
+    
+  
+    
+      <li><a href="/mi/server/troubleshooting/booting-error/">본체 부팅 오류</a></li>
+    
+  
+    
+      <li><a href="/mi/server/troubleshooting/command-error/">명령어 작동 문제</a></li>
+    
+  
+    
+      <li><a href="/mi/server/troubleshooting/network_error/">네트워크 오류</a></li>
+    
+  
+    
+      <li><a href="/mi/server/troubleshooting/permission/">파일 접근 권한 문제</a></li>
+    
+  
+    
+      <li><a href="/mi/server/troubleshooting/process_stop/">프로세스 중단 문제</a></li>
+    
+  
 </ul>
-
-<h2 id="확인-방법">확인 방법</h2>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> <span class="o">[</span>파일명]
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">rwx</code> 권한 표시와 함께 소유자, 그룹 정보를 확인할 수 있습니다.</li>
-</ul>
-
-<h2 id="해결-방법">해결 방법</h2>
-
-<ol>
-  <li><strong>권한 변경</strong></li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod </span>770 <span class="o">[</span>파일명]
-</code></pre></div></div>
-
-<ul>
-  <li>파일 소유자가 <code class="language-plaintext highlighter-rouge">mi</code> 그룹 사용자들에게 읽기/쓰기/실행 권한을 부여</li>
-</ul>
-
-<ol>
-  <li><strong>소유자 변경 (root 계정에서 실행)</strong></li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown </span>사용자:mi <span class="o">[</span>파일명]
-</code></pre></div></div>
-
-<ul>
-  <li>파일 소유자를 해당 사용자로 변경하고, 그룹을 <code class="language-plaintext highlighter-rouge">mi</code>로 설정</li>
-</ul>
-
-<h2 id="주의">주의</h2>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">chmod 777</code> 등 과도하게 넓은 권한 설정은 보안상 위험할 수 있습니다.</li>
-</ul>
+<p><img src="https://github.com/user-attachments/assets/f608482b-fe1f-488b-b457-c4fc94925ce6" alt="image" /></p>
 
         
       </section>
@@ -328,23 +309,6 @@
       <footer class="page__meta">
         
         
-
-
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/categories/#server" class="page__taxonomy-item p-category" rel="tag">server</a><span class="sep">, </span>
-    
-      <a href="/categories/#troubleshooting" class="page__taxonomy-item p-category" rel="tag">troubleshooting</a>
-    
-    </span>
-  </p>
 
 
         
@@ -358,10 +322,10 @@
       
   <nav class="pagination">
     
-      <a href="/mi/server/troubleshooting/network_error/" class="pagination--pager" title="네트워크 오류">이전</a>
+      <a href="/mi/server/troubleshooting/process_stop/" class="pagination--pager" title="프로세스 중단 문제">이전</a>
     
     
-      <a href="/mi/server/troubleshooting/process_stop/" class="pagination--pager" title="프로세스 중단 문제">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
