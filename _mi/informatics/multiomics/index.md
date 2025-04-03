@@ -1,5 +1,5 @@
 ---
-title: "Multiomics Informatical Process"
+title: "Bio-informatics Multi-omics Integration"
 layout: single
 sidebar:
   nav: "category-nav"
