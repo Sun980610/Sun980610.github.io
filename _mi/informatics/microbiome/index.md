@@ -1,5 +1,5 @@
 ---
-title: "Microbiome Informatical Process"
+title: "Bio-informatics Microbiome Analysis"
 layout: single
 sidebar:
   nav: "category-nav"
