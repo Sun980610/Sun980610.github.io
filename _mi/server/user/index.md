@@ -16,4 +16,3 @@ permalink: /mi/server/user/
     {% endunless %}
   {% endfor %}
 </ul>
-![image](https://github.com/user-attachments/assets/f608482b-fe1f-488b-b457-c4fc94925ce6)
