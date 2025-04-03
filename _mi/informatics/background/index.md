@@ -6,8 +6,8 @@ sidebar:
 permalink: /mi/informatics/background/
 ---
 
-{% assign docs1 = site.mi | where: "categories", "server" %}
-{% assign docs2 = docs1 | where: "categories", "troubleshooting" %}
+{% assign docs1 = site.mi | where: "categories", "informatics" %}
+{% assign docs2 = docs1 | where: "categories", "background" %}
 
 <ul>
   {% for doc in docs2 %}
@@ -16,4 +16,3 @@ permalink: /mi/informatics/background/
     {% endunless %}
   {% endfor %}
 </ul>
-![image](https://github.com/user-attachments/assets/d9012eca-f14e-4cd7-a47e-4012af17c90d)
