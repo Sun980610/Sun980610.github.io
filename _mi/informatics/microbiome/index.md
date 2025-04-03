@@ -6,8 +6,8 @@ sidebar:
 permalink: /mi/informatics/microbiome/
 ---
 
-{% assign docs1 = site.mi | where: "categories", "server" %}
-{% assign docs2 = docs1 | where: "categories", "troubleshooting" %}
+{% assign docs1 = site.mi | where: "categories", "informatics" %}
+{% assign docs2 = docs1 | where: "categories", "microbiome" %}
 
 <ul>
   {% for doc in docs2 %}
