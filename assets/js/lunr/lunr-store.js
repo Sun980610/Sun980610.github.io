@@ -11,7 +11,7 @@ var store = [{
         "url": "/mi/informatics/microbiome/",
         "teaser": null
       },{
-        "title": "Multiomics Informatical Process",
+        "title": "Bio-informatics Multi-omics Integration",
         "excerpt":"      ","categories": [],
         "tags": [],
         "url": "/mi/informatics/multiomics/",
