@@ -3,6 +3,7 @@ title: "외부에서 서버 접근 불가"
 layout: single
 sidebar:
   nav: "custom-sidebar"
+permalink: /mi/server/troubleshooting/SSH-error/
 categories:
   - server
   - troubleshooting
