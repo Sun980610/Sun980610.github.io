@@ -5,7 +5,7 @@ var store = [{
         "url": "/mi/informatics/background/",
         "teaser": null
       },{
-        "title": "Microbiome Informatical Process",
+        "title": "Bio-informatics Microbiome Analysis",
         "excerpt":"      ","categories": [],
         "tags": [],
         "url": "/mi/informatics/microbiome/",
