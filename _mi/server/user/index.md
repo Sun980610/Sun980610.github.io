@@ -1,5 +1,5 @@
 ---
-title: "Server User"
+title: "Server User Management"
 layout: single
 sidebar:
   nav: "category-nav"
@@ -7,7 +7,7 @@ permalink: /mi/server/user/
 ---
 
 {% assign docs1 = site.mi | where: "categories", "server" %}
-{% assign docs2 = docs1 | where: "categories", "troubleshooting" %}
+{% assign docs2 = docs1 | where: "categories", "user" %}
 
 <ul>
   {% for doc in docs2 %}
