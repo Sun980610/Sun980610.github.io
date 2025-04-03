@@ -118,4 +118,7 @@ var store = [{
   },{
     "title": "SUN_mi",
     "excerpt":"SUN PARK   Mucosal Immunology  ","url": "/"
+  },{
+    "title": "Tags",
+    "excerpt":"","url": "/tags/"
   }]
