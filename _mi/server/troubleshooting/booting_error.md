@@ -2,7 +2,8 @@
 title: "본체 부팅 오류"
 layout: single
 sidebar:
-  nav: "category-nav"
+  nav: "custom-sidebar"
+permalink: /mi/server/troubleshooting/booting-error/
 categories:
   - server
   - troubleshooting
