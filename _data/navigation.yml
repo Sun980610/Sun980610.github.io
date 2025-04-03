@@ -44,3 +44,7 @@ category-nav:
     children:
       - title: "Travel"
         url: /sun/travel/
+
+custom-sidebar:
+  - title: "Documentation"
+    url: /docs/
