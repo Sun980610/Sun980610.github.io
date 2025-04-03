@@ -6,8 +6,8 @@ sidebar:
 permalink: /mi/statistics/etc/
 ---
 
-{% assign docs1 = site.mi | where: "categories", "server" %}
-{% assign docs2 = docs1 | where: "categories", "troubleshooting" %}
+{% assign docs1 = site.mi | where: "categories", "statistics" %}
+{% assign docs2 = docs1 | where: "categories", "etc" %}
 
 <ul>
   {% for doc in docs2 %}
