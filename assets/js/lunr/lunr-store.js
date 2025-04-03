@@ -14,7 +14,7 @@ var store = [{
         "title": "명령어 작동 문제",
         "excerpt":"서버 내에서 평소 사용하던 명령어가 갑자기 작동하지 않거나, 오류 메시지와 함께 종료되는 경우, 환경 설정 또는 패키지 문제일 가능성이 높습니다. 원인 conda 환경 또는 시스템 패키지 업데이트 누락 명령어 자체의 지원 중단 또는 변경 패키지 손상 또는 누락 버전 간 충돌 (예: Python, R, 라이브러리 간) PATH 환경 변수에 해당...","categories": ["server","troubleshooting"],
         "tags": [],
-        "url": "/mi/server/troubleshooting/command_error/",
+        "url": "/mi/server/troubleshooting/command-error/",
         "teaser": null
       },{
         "title": "Server Troubleshooting",
