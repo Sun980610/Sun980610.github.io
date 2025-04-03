@@ -3,11 +3,11 @@ title: "Statistics Microbiome R"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: /mi/statistics/microbiome/
+permalink: /mi/statistics/microbiomeR/
 ---
 
-{% assign docs1 = site.mi | where: "categories", "server" %}
-{% assign docs2 = docs1 | where: "categories", "troubleshooting" %}
+{% assign docs1 = site.mi | where: "categories", "statistics" %}
+{% assign docs2 = docs1 | where: "categories", "microbiomeR" %}
 
 <ul>
   {% for doc in docs2 %}
