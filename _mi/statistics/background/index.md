@@ -1,13 +1,13 @@
 ---
-title: "Statistics Background"
+title: "Statistical Background"
 layout: single
 sidebar:
   nav: "category-nav"
 permalink: /mi/statistics/background/
 ---
 
-{% assign docs1 = site.mi | where: "categories", "server" %}
-{% assign docs2 = docs1 | where: "categories", "troubleshooting" %}
+{% assign docs1 = site.mi | where: "categories", "statistics" %}
+{% assign docs2 = docs1 | where: "categories", "background" %}
 
 <ul>
   {% for doc in docs2 %}
