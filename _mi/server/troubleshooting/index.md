@@ -3,6 +3,7 @@ title: "Server Troubleshooting"
 layout: single
 sidebar:
   nav: "category-nav"
+permalink: /mi/server/troubleshooting/
 ---
 
 {% assign docs1 = site.mi | where: "categories", "server" %}
