@@ -1,5 +1,5 @@
 var store = [{
-        "title": "Informatics Basic Concepts",
+        "title": "Bio-informatics Background",
         "excerpt":"      ","categories": [],
         "tags": [],
         "url": "/mi/informatics/background/",
