@@ -39,9 +39,12 @@ categories:
 - 이전 커널로 부팅이 성공하면, 문제가 된 커널 삭제:
 
 ```bash
-uname -r  # 현재 실행 중인 커널 버전 확인
+# 현재 실행 중인 커널 버전 확인
+uname -r
+
+# 설치된 커널 리스트 확인 후 문제 커널 제거
 dpkg --list | grep linux-image
-sudo apt-get remove linux-image-[문제 커널 버전]
+sudo apt-get remove linux-image-5.15.0-86-generic
 sudo update-grub
 ```
 
@@ -51,6 +54,7 @@ sudo update-grub
 - "root" 또는 "fsck" 모드로 진입하여 다음 명령 실행:
 
 ```bash
+# 파일 시스템 검사
 fsck -y /dev/sdX
 ```
 
@@ -63,8 +67,9 @@ fsck -y /dev/sdX
 - 백업 후 시스템 재설치를 고려
 
 ```bash
+# 데이터 백업
 sudo mount /dev/sdX1 /mnt
-cp -r /mnt/home/사용자명 /media/usb/
+cp -r /mnt/home/username /media/usb/
 ```
 
 ## 예방 및 권장 조치
