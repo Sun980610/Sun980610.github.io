@@ -12,7 +12,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Multiomics Informatical Process",
-        "excerpt":"                외부에서 서버 접근 불가                    본체 부팅 오류                    명령어 작동 문제                    네트워크 오류                    파일 접근 권한 문제                    프로세스 중단 문제          ","categories": [],
+        "excerpt":"      ","categories": [],
         "tags": [],
         "url": "/mi/informatics/multiomics/",
         "teaser": null
