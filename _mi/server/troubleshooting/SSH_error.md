@@ -2,9 +2,7 @@
 title: "외부에서 서버 접근 불가"
 layout: single
 sidebar:
-  nav: "category-nav"
-  contents: |
-    {% include custom-mi-sidebar.html %}
+  nav: "custom-sidebar"
 categories:
   - server
   - troubleshooting
