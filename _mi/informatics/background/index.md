@@ -1,5 +1,5 @@
 ---
-title: "Informatics Basic Concepts"
+title: "Bio-informatics Background"
 layout: single
 sidebar:
   nav: "category-nav"
