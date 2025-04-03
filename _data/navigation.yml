@@ -23,24 +23,24 @@ category-nav:
   - title: "Bio-informatics"
     children:
       - title: "Basic concepts"
-        url: /categories/statistics/background/
+        url: /_mi/statistics/background/
       - title: "Microbiome Analysis"
-        url: /categories/statistics/microbiome/
+        url: /_mi/statistics/microbiome/
       - title: "Multi-omics Integration"
-        url: /categories/statistics/multiomics/
+        url: /_mi/statistics/multiomics/
   - title: "Statistical Analysis"
     children:
       - title: "Background"
-        url: /categories/statistics/background/
+        url: /_mi/statistics/background/
       - title: "Basic R"
-        url: /categories/statistics/basicR/
+        url: /_mi/statistics/basicR/
       - title: "Microbiome R"
-        url: /categories/statistics/microbiomeR/
+        url: /_mi/statistics/microbiomeR/
       - title: "Metabolites R"
-        url: /categories/statistics/metabolitesR/
+        url: /_mi/statistics/metabolitesR/
       - title: "etc"
-        url: /categories/statistics/etc/
+        url: /_mi/statistics/etc/
   - title: "SUN"
     children:
       - title: "Travel"
-        url: /categories/sun/travel/
+        url: /_sun/travel/
