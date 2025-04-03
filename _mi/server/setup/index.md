@@ -3,11 +3,11 @@ title: "Server Setup"
 layout: single
 sidebar:
   nav: "category-nav"
-permalink: /mi/server/troubleshooting/
+permalink: /mi/server/setup/
 ---
 
 {% assign docs1 = site.mi | where: "categories", "server" %}
-{% assign docs2 = docs1 | where: "categories", "troubleshooting" %}
+{% assign docs2 = docs1 | where: "categories", "setup" %}
 
 <ul>
   {% for doc in docs2 %}
