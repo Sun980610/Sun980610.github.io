@@ -1,4 +1,10 @@
 var store = [{
+        "title": "Server Setup",
+        "excerpt":"                외부에서 서버 접근 불가                    본체 부팅 오류                    명령어 작동 문제                    네트워크 오류                    파일 접근 권한 문제                    프로세스 중단 문제          ","categories": [],
+        "tags": [],
+        "url": "/mi/server/troubleshooting/",
+        "teaser": null
+      },{
         "title": "외부에서 서버 접근 불가",
         "excerpt":"다른 컴퓨터에서 서버에 접속(RStudio Server, SSH 등)할 수 없는 경우, 네트워크 설정이나 서비스 상태, 포트 개방 여부 등을 확인해야 합니다. 원인 SSH 서비스가 실행되고 있지 않음 포트 설정이 올바르지 않거나 변경됨 방화벽 설정에 의해 포트가 차단됨 교내 또는 외부망 포트 개방 기한이 만료됨 서버 IP 또는 도메인 변경 점검 방법...","categories": ["server","troubleshooting"],
         "tags": [],
