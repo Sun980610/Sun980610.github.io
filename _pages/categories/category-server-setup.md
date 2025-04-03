@@ -1,6 +1,5 @@
 ---
 title: "Server setup"
 layout: category
-permalink: /categories/server-setup/
-taxonomy: server-setup
+permalink: /categories/server/setup/
 ---
