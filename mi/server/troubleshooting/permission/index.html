@@ -1,0 +1,433 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>파일 접근 권한 문제 - SUN_mi</title>
+<meta name="description" content="서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.">
+
+
+  <meta name="author" content="SUN PARK">
+  
+  <meta property="article:author" content="SUN PARK">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="SUN_mi">
+<meta property="og:title" content="파일 접근 권한 문제">
+<meta property="og:url" content="/mi/server/troubleshooting/permission/">
+
+
+  <meta property="og:description" content="서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-04-03T03:09:29+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/mi/server/troubleshooting/permission/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SUN_mi Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SUN_mi
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >Home</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/category_list/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Server Configuration</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/server/setup/">Server Setup</a></li>
+            
+              <li><a href="/mi/server/user/">User Management</a></li>
+            
+              <li><a href="/mi/server/troubleshooting/">Troubleshooting</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Bio-informatics</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Basic concepts</a></li>
+            
+              <li><a href="/mi/statistics/microbiome/">Microbiome Analysis</a></li>
+            
+              <li><a href="/mi/statistics/multiomics/">Multi-omics Integration</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Statistical Analysis</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Background</a></li>
+            
+              <li><a href="/mi/statistics/basicR/">Basic R</a></li>
+            
+              <li><a href="/mi/statistics/microbiomeR/">Microbiome R</a></li>
+            
+              <li><a href="/mi/statistics/metabolitesR/">Metabolites R</a></li>
+            
+              <li><a href="/mi/statistics/etc/">etc</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">SUN</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/sun/travel/">Travel</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="파일 접근 권한 문제">
+    <meta itemprop="description" content="서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.">
+    <meta itemprop="datePublished" content="2025-04-03T03:09:29+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="/mi/server/troubleshooting/permission/" itemprop="url">파일 접근 권한 문제
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>서버 사용 중 특정 파일이나 폴더에 접근할 수 없는 경우, 대부분 파일 권한 설정이 원인입니다.</p>
+
+<h2 id="원인">원인</h2>
+
+<ul>
+  <li>사용자가 해당 파일에 대한 읽기, 쓰기, 실행 권한을 가지고 있지 않음</li>
+  <li>그룹 설정이 잘못되어 있음</li>
+  <li>루트 계정 소유 파일을 일반 사용자가 접근하려는 경우</li>
+</ul>
+
+<h2 id="확인-방법">확인 방법</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> <span class="o">[</span>파일명]
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rwx</code> 권한 표시와 함께 소유자, 그룹 정보를 확인할 수 있습니다.</li>
+</ul>
+
+<h2 id="해결-방법">해결 방법</h2>
+
+<ol>
+  <li><strong>권한 변경</strong></li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod </span>770 <span class="o">[</span>파일명]
+</code></pre></div></div>
+
+<ul>
+  <li>파일 소유자가 <code class="language-plaintext highlighter-rouge">mi</code> 그룹 사용자들에게 읽기/쓰기/실행 권한을 부여</li>
+</ul>
+
+<ol>
+  <li><strong>소유자 변경 (root 계정에서 실행)</strong></li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown </span>사용자:mi <span class="o">[</span>파일명]
+</code></pre></div></div>
+
+<ul>
+  <li>파일 소유자를 해당 사용자로 변경하고, 그룹을 <code class="language-plaintext highlighter-rouge">mi</code>로 설정</li>
+</ul>
+
+<h2 id="주의">주의</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chmod 777</code> 등 과도하게 넓은 권한 설정은 보안상 위험할 수 있습니다.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#server" class="page__taxonomy-item p-category" rel="tag">server</a><span class="sep">, </span>
+    
+      <a href="/categories/#troubleshooting" class="page__taxonomy-item p-category" rel="tag">troubleshooting</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-04-03T03:09:29+00:00">April 3, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/mi/server/troubleshooting/network_error/" class="pagination--pager" title="네트워크 오류">이전</a>
+    
+    
+      <a href="/mi/server/troubleshooting/process_stop/" class="pagination--pager" title="프로세스 중단 문제">다음</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="">SUN_mi</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

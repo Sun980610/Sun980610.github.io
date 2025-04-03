@@ -1,0 +1,467 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>본체 부팅 오류 - SUN_mi</title>
+<meta name="description" content="서버 전원을 켰을 때 운영체제가 정상적으로 부팅되지 않거나, 부팅 도중 멈추는 경우가 발생할 수 있습니다.">
+
+
+  <meta name="author" content="SUN PARK">
+  
+  <meta property="article:author" content="SUN PARK">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="SUN_mi">
+<meta property="og:title" content="본체 부팅 오류">
+<meta property="og:url" content="/mi/server/troubleshooting/booting_error/">
+
+
+  <meta property="og:description" content="서버 전원을 켰을 때 운영체제가 정상적으로 부팅되지 않거나, 부팅 도중 멈추는 경우가 발생할 수 있습니다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-04-03T03:09:29+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/mi/server/troubleshooting/booting_error/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SUN_mi Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SUN_mi
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >Home</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/category_list/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Server Configuration</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/server/setup/">Server Setup</a></li>
+            
+              <li><a href="/mi/server/user/">User Management</a></li>
+            
+              <li><a href="/mi/server/troubleshooting/">Troubleshooting</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Bio-informatics</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Basic concepts</a></li>
+            
+              <li><a href="/mi/statistics/microbiome/">Microbiome Analysis</a></li>
+            
+              <li><a href="/mi/statistics/multiomics/">Multi-omics Integration</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Statistical Analysis</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Background</a></li>
+            
+              <li><a href="/mi/statistics/basicR/">Basic R</a></li>
+            
+              <li><a href="/mi/statistics/microbiomeR/">Microbiome R</a></li>
+            
+              <li><a href="/mi/statistics/metabolitesR/">Metabolites R</a></li>
+            
+              <li><a href="/mi/statistics/etc/">etc</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">SUN</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/sun/travel/">Travel</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="본체 부팅 오류">
+    <meta itemprop="description" content="서버 전원을 켰을 때 운영체제가 정상적으로 부팅되지 않거나, 부팅 도중 멈추는 경우가 발생할 수 있습니다.">
+    <meta itemprop="datePublished" content="2025-04-03T03:09:29+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="/mi/server/troubleshooting/booting_error/" itemprop="url">본체 부팅 오류
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>서버 전원을 켰을 때 운영체제가 정상적으로 부팅되지 않거나, 부팅 도중 멈추는 경우가 발생할 수 있습니다.</p>
+
+<h2 id="원인">원인</h2>
+
+<ul>
+  <li>커널 업데이트 후 충돌 발생</li>
+  <li>부팅 로더(GRUB) 설정 오류</li>
+  <li>파일 시스템 손상</li>
+  <li>하드웨어 문제 (디스크, 메모리 등)</li>
+  <li>바이러스 또는 악성 코드 감염</li>
+</ul>
+
+<h2 id="증상-유형">증상 유형</h2>
+
+<ul>
+  <li>GRUB 화면에서 멈춤 또는 부팅 항목 없음</li>
+  <li>“kernel panic” 메시지 출력</li>
+  <li>무한 로딩 상태</li>
+  <li>전원은 켜지나 운영체제가 시작되지 않음</li>
+</ul>
+
+<h2 id="조치-방법">조치 방법</h2>
+
+<h3 id="1-grub-화면-진입">1. GRUB 화면 진입</h3>
+
+<ul>
+  <li>부팅 시 F2 또는 Shift 키 연타 → GRUB 메뉴로 진입</li>
+  <li>“Advanced options” 선택 → 이전 커널 버전으로 부팅 시도</li>
+</ul>
+
+<h3 id="2-커널-복구">2. 커널 복구</h3>
+
+<ul>
+  <li>이전 커널로 부팅이 성공하면, 문제가 된 커널 삭제:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">uname</span> <span class="nt">-r</span>  <span class="c"># 현재 실행 중인 커널 버전 확인</span>
+dpkg <span class="nt">--list</span> | <span class="nb">grep </span>linux-image
+<span class="nb">sudo </span>apt-get remove linux-image-[문제 커널 버전]
+<span class="nb">sudo </span>update-grub
+</code></pre></div></div>
+
+<h3 id="3-복구-모드-진입">3. 복구 모드 진입</h3>
+
+<ul>
+  <li>GRUB 메뉴에서 “(recovery mode)” 선택</li>
+  <li>“root” 또는 “fsck” 모드로 진입하여 다음 명령 실행:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fsck <span class="nt">-y</span> /dev/sdX
+</code></pre></div></div>
+
+<ul>
+  <li>부트 파티션이나 루트 파일 시스템 오류를 자동 복구</li>
+</ul>
+
+<h3 id="4-live-usb-사용">4. Live USB 사용</h3>
+
+<ul>
+  <li>위 방식으로도 부팅이 불가능할 경우, Ubuntu Live USB로 부팅</li>
+  <li><code class="language-plaintext highlighter-rouge">/mnt</code> 등에 루트 디렉토리를 마운트하고 데이터 백업 수행</li>
+  <li>백업 후 시스템 재설치를 고려</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mount /dev/sdX1 /mnt
+<span class="nb">cp</span> <span class="nt">-r</span> /mnt/home/사용자명 /media/usb/
+</code></pre></div></div>
+
+<h2 id="예방-및-권장-조치">예방 및 권장 조치</h2>
+
+<ul>
+  <li>커널 또는 시스템 업데이트 전, 반드시 백업 수행</li>
+  <li><code class="language-plaintext highlighter-rouge">/boot</code>, <code class="language-plaintext highlighter-rouge">/home</code> 등 주요 파티션 분리 구성 권장</li>
+  <li>중요한 설정 파일은 별도 저장 (<code class="language-plaintext highlighter-rouge">/etc/fstab</code>, <code class="language-plaintext highlighter-rouge">/etc/netplan/*</code> 등)</li>
+</ul>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+  <li>부팅 관련 로그는 <code class="language-plaintext highlighter-rouge">/var/log/boot.log</code>, <code class="language-plaintext highlighter-rouge">dmesg</code>, <code class="language-plaintext highlighter-rouge">/var/log/syslog</code> 등에 저장됩니다.</li>
+  <li>EFI/BIOS 설정 변경이 영향을 줄 수 있으므로 주의하여 확인해야 합니다.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#server" class="page__taxonomy-item p-category" rel="tag">server</a><span class="sep">, </span>
+    
+      <a href="/categories/#troubleshooting" class="page__taxonomy-item p-category" rel="tag">troubleshooting</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-04-03T03:09:29+00:00">April 3, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/mi/server/troubleshooting/SSH_error/" class="pagination--pager" title="외부에서 서버 접근 불가">이전</a>
+    
+    
+      <a href="/mi/server/troubleshooting/command_error/" class="pagination--pager" title="명령어 작동 문제">다음</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="">SUN_mi</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

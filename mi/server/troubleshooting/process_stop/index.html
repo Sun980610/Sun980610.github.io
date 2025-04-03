@@ -1,0 +1,473 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>프로세스 중단 문제 - SUN_mi</title>
+<meta name="description" content="서버 사용 중 프로세스가 응답하지 않거나 작업이 멈춘 경우, 대개 시스템 자원(CPU 또는 메모리)의 과부하가 주요 원인입니다">
+
+
+  <meta name="author" content="SUN PARK">
+  
+  <meta property="article:author" content="SUN PARK">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="SUN_mi">
+<meta property="og:title" content="프로세스 중단 문제">
+<meta property="og:url" content="/mi/server/troubleshooting/process_stop/">
+
+
+  <meta property="og:description" content="서버 사용 중 프로세스가 응답하지 않거나 작업이 멈춘 경우, 대개 시스템 자원(CPU 또는 메모리)의 과부하가 주요 원인입니다">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-04-03T03:09:29+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/mi/server/troubleshooting/process_stop/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SUN_mi Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SUN_mi
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >Home</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/category_list/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Server Configuration</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/server/setup/">Server Setup</a></li>
+            
+              <li><a href="/mi/server/user/">User Management</a></li>
+            
+              <li><a href="/mi/server/troubleshooting/">Troubleshooting</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Bio-informatics</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Basic concepts</a></li>
+            
+              <li><a href="/mi/statistics/microbiome/">Microbiome Analysis</a></li>
+            
+              <li><a href="/mi/statistics/multiomics/">Multi-omics Integration</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Statistical Analysis</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Background</a></li>
+            
+              <li><a href="/mi/statistics/basicR/">Basic R</a></li>
+            
+              <li><a href="/mi/statistics/microbiomeR/">Microbiome R</a></li>
+            
+              <li><a href="/mi/statistics/metabolitesR/">Metabolites R</a></li>
+            
+              <li><a href="/mi/statistics/etc/">etc</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">SUN</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/sun/travel/">Travel</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="프로세스 중단 문제">
+    <meta itemprop="description" content="서버 사용 중 프로세스가 응답하지 않거나 작업이 멈춘 경우, 대개 시스템 자원(CPU 또는 메모리)의 과부하가 주요 원인입니다">
+    <meta itemprop="datePublished" content="2025-04-03T03:09:29+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="/mi/server/troubleshooting/process_stop/" itemprop="url">프로세스 중단 문제
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>서버 사용 중 프로세스가 응답하지 않거나 작업이 멈춘 경우, 대개 시스템 자원(CPU 또는 메모리)의 과부하가 주요 원인입니다</p>
+
+<h2 id="원인">원인</h2>
+
+<ul>
+  <li>
+    <p>CPU 과부하<br />
+특정 프로세스 또는 다수의 병렬 프로세스가 CPU 코어를 과도하게 점유하면 전체 서버의 응답 속도가 느려지거나 정지될 수 있습니다.</p>
+  </li>
+  <li>
+    <p>메모리 부족<br />
+메모리 사용량이 시스템 전체 용량을 초과하는 경우, 프로세스가 swap 영역으로 이동하거나 강제 종료될 수 있습니다.</p>
+  </li>
+  <li>
+    <p>병렬 처리 수 과다</p>
+    <ul>
+      <li>MI: 현재 서버는 30개의 CPU 코어를 사용 중입니다.<br />
+하나의 작업 또는 다수의 작업이 병렬 구조로 30개 이상의 코어를 동시에 사용하려 할 경우, 전체 시스템이 정지할 수 있습니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="진단-방법">진단 방법</h2>
+
+<ol>
+  <li>CPU 사용량 확인</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>top
+</code></pre></div></div>
+
+<ul>
+  <li>현재 실행 중인 프로세스들의 CPU 사용률을 실시간으로 확인할 수 있습니다.</li>
+  <li>특정 프로세스가 과도하게 CPU를 점유하는 경우, 아래 명령어로 종료할 수 있습니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">kill</span> <span class="o">[</span>PID]
+</code></pre></div></div>
+
+<ol>
+  <li>메모리 사용량 확인</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>free <span class="nt">-h</span>
+</code></pre></div></div>
+
+<ul>
+  <li>전체 메모리, 사용 중인 메모리, 사용 가능한 메모리 등을 확인할 수 있습니다.</li>
+  <li>사용 가능한 메모리가 거의 없다면, 해당 작업을 분할해서 실행해야 합니다.</li>
+</ul>
+
+<ol>
+  <li>병렬 작업 수 점검
+    <ul>
+      <li>사용 중인 코드(R, Python 등) 내에서 병렬 파라미터 설정 확인
+        <ul>
+          <li>예: <code class="language-plaintext highlighter-rouge">n_jobs=8</code>, <code class="language-plaintext highlighter-rouge">--threads 8</code>, <code class="language-plaintext highlighter-rouge">--cpus-per-task=8</code> 등</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="해결-방법">해결 방법</h2>
+
+<ul>
+  <li>과도한 자원을 사용하는 프로세스를 종료하거나 병렬 처리 수를 줄여 작업을 나눠서 실행합니다.</li>
+  <li>대용량 데이터를 처리하는 경우, 데이터를 여러 조각으로 나누어 처리합니다.</li>
+  <li>R, Python 등에서는 <code class="language-plaintext highlighter-rouge">batch 처리</code>, <code class="language-plaintext highlighter-rouge">iterator</code>, <code class="language-plaintext highlighter-rouge">generator</code> 등을 활용한 점진적 실행을 고려합니다.</li>
+</ul>
+
+<h2 id="추가-도구">추가 도구</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">htop</code> 명령어는 <code class="language-plaintext highlighter-rouge">top</code>보다 직관적인 인터페이스로 자원 사용 상태를 확인할 수 있습니다.</li>
+  <li>설치되어 있지 않다면 다음 명령어로 설치할 수 있습니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>htop
+htop
+</code></pre></div></div>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+  <li>병렬 작업은 시스템 상황에 맞게 조정하는 것이 중요합니다.</li>
+  <li>프로세스 중지와 관련된 시스템 로그는 <code class="language-plaintext highlighter-rouge">/var/log/syslog</code>, <code class="language-plaintext highlighter-rouge">dmesg</code> 등을 통해 추가 확인할 수 있습니다.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#server" class="page__taxonomy-item p-category" rel="tag">server</a><span class="sep">, </span>
+    
+      <a href="/categories/#troubleshooting" class="page__taxonomy-item p-category" rel="tag">troubleshooting</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-04-03T03:09:29+00:00">April 3, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/mi/server/troubleshooting/permission/" class="pagination--pager" title="파일 접근 권한 문제">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="">SUN_mi</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

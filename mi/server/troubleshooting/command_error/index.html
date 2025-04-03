@@ -1,0 +1,505 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>명령어 작동 문제 - SUN_mi</title>
+<meta name="description" content="서버 내에서 평소 사용하던 명령어가 갑자기 작동하지 않거나, 오류 메시지와 함께 종료되는 경우, 환경 설정 또는 패키지 문제일 가능성이 높습니다.">
+
+
+  <meta name="author" content="SUN PARK">
+  
+  <meta property="article:author" content="SUN PARK">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="SUN_mi">
+<meta property="og:title" content="명령어 작동 문제">
+<meta property="og:url" content="/mi/server/troubleshooting/command_error/">
+
+
+  <meta property="og:description" content="서버 내에서 평소 사용하던 명령어가 갑자기 작동하지 않거나, 오류 메시지와 함께 종료되는 경우, 환경 설정 또는 패키지 문제일 가능성이 높습니다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-04-03T03:09:29+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/mi/server/troubleshooting/command_error/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SUN_mi Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SUN_mi
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >Home</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/category_list/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Server Configuration</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/server/setup/">Server Setup</a></li>
+            
+              <li><a href="/mi/server/user/">User Management</a></li>
+            
+              <li><a href="/mi/server/troubleshooting/">Troubleshooting</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Bio-informatics</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Basic concepts</a></li>
+            
+              <li><a href="/mi/statistics/microbiome/">Microbiome Analysis</a></li>
+            
+              <li><a href="/mi/statistics/multiomics/">Multi-omics Integration</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Statistical Analysis</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Background</a></li>
+            
+              <li><a href="/mi/statistics/basicR/">Basic R</a></li>
+            
+              <li><a href="/mi/statistics/microbiomeR/">Microbiome R</a></li>
+            
+              <li><a href="/mi/statistics/metabolitesR/">Metabolites R</a></li>
+            
+              <li><a href="/mi/statistics/etc/">etc</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">SUN</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/sun/travel/">Travel</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="명령어 작동 문제">
+    <meta itemprop="description" content="서버 내에서 평소 사용하던 명령어가 갑자기 작동하지 않거나, 오류 메시지와 함께 종료되는 경우, 환경 설정 또는 패키지 문제일 가능성이 높습니다.">
+    <meta itemprop="datePublished" content="2025-04-03T03:09:29+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="/mi/server/troubleshooting/command_error/" itemprop="url">명령어 작동 문제
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>서버 내에서 평소 사용하던 명령어가 갑자기 작동하지 않거나, 오류 메시지와 함께 종료되는 경우, 환경 설정 또는 패키지 문제일 가능성이 높습니다.</p>
+
+<h2 id="원인">원인</h2>
+
+<ul>
+  <li>conda 환경 또는 시스템 패키지 업데이트 누락</li>
+  <li>명령어 자체의 지원 중단 또는 변경</li>
+  <li>패키지 손상 또는 누락</li>
+  <li>버전 간 충돌 (예: Python, R, 라이브러리 간)</li>
+  <li>PATH 환경 변수에 해당 명령어가 포함된 경로가 누락됨</li>
+</ul>
+
+<h2 id="점검-방법">점검 방법</h2>
+
+<ol>
+  <li>conda 환경 내 패키지 버전 확인</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda list
+</code></pre></div></div>
+
+<ul>
+  <li>현재 환경에서 설치된 패키지와 버전을 확인합니다.</li>
+</ul>
+
+<ol>
+  <li>시스템 명령어 존재 여부 확인</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which <span class="o">[</span>명령어]
+</code></pre></div></div>
+
+<ul>
+  <li>경로가 출력되지 않으면 명령어가 설치되어 있지 않거나 PATH에 등록되어 있지 않은 상태입니다.</li>
+</ul>
+
+<ol>
+  <li>오류 메시지 확인</li>
+</ol>
+
+<ul>
+  <li>실행 시 출력되는 메시지를 바탕으로 오류 유형을 파악합니다.
+    <ul>
+      <li>예: <code class="language-plaintext highlighter-rouge">command not found</code>, <code class="language-plaintext highlighter-rouge">ImportError</code>, <code class="language-plaintext highlighter-rouge">Segmentation fault</code> 등</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="해결-방법">해결 방법</h2>
+
+<ol>
+  <li>conda 환경 업데이트</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda update conda
+conda update <span class="nt">--all</span>
+</code></pre></div></div>
+
+<ul>
+  <li>현재 환경에서 패키지를 최신 버전으로 정리합니다.</li>
+</ul>
+
+<ol>
+  <li>시스템 패키지 업데이트 (mi_root 계정에서 실행)</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get upgrade
+</code></pre></div></div>
+
+<ul>
+  <li>명령어 자체가 시스템 패키지에 속해 있는 경우 업데이트로 복구할 수 있습니다.</li>
+</ul>
+
+<ol>
+  <li>문제 패키지 재설치</li>
+</ol>
+
+<ul>
+  <li>pip 또는 conda 환경에 따라 다음 중 하나를 사용합니다:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip uninstall <span class="o">[</span>패키지명]
+pip <span class="nb">install</span> <span class="o">[</span>패키지명]
+</code></pre></div></div>
+
+<p>또는</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda remove <span class="o">[</span>패키지명]
+conda <span class="nb">install</span> <span class="o">[</span>패키지명]
+</code></pre></div></div>
+
+<ol>
+  <li>PATH 환경 변수 수정</li>
+</ol>
+
+<ul>
+  <li>명령어가 존재하는 경로가 PATH에 누락된 경우, <code class="language-plaintext highlighter-rouge">.bashrc</code> 또는 <code class="language-plaintext highlighter-rouge">.zshrc</code> 파일에 다음 줄을 추가합니다:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/경로/디렉토리:<span class="nv">$PATH</span>
+</code></pre></div></div>
+
+<ul>
+  <li>설정 반영을 위해 쉘 재시작 또는 다음 명령 실행</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bashrc
+</code></pre></div></div>
+
+<h2 id="주의-사항">주의 사항</h2>
+
+<ul>
+  <li>conda 환경 안과 밖에서 사용하는 명령어가 다를 수 있습니다. 환경을 활성화한 후 명령어를 실행해 보세요.</li>
+  <li>하나의 환경에서 너무 많은 의존성이 충돌하면 새 환경을 만들고 필요한 패키지만 설치하는 것도 방법입니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> 새환경이름 <span class="nv">python</span><span class="o">=</span>버전
+conda activate 새환경이름
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#server" class="page__taxonomy-item p-category" rel="tag">server</a><span class="sep">, </span>
+    
+      <a href="/categories/#troubleshooting" class="page__taxonomy-item p-category" rel="tag">troubleshooting</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-04-03T03:09:29+00:00">April 3, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/mi/server/troubleshooting/booting_error/" class="pagination--pager" title="본체 부팅 오류">이전</a>
+    
+    
+      <a href="/mi/server/troubleshooting/index/" class="pagination--pager" title="Server Troubleshooting">다음</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="">SUN_mi</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
