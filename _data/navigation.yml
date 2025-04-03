@@ -22,12 +22,12 @@ category-nav:
         url: /mi/server/troubleshooting/
   - title: "Bio-informatics"
     children:
-      - title: "Basic concepts"
-        url: /mi/statistics/background/
+      - title: "Background"
+        url: /mi/informatics/background/
       - title: "Microbiome Analysis"
-        url: /mi/statistics/microbiome/
+        url: /mi/informatics/microbiome/
       - title: "Multi-omics Integration"
-        url: /mi/statistics/multiomics/
+        url: /mi/informatics/multiomics/
   - title: "Statistical Analysis"
     children:
       - title: "Background"
