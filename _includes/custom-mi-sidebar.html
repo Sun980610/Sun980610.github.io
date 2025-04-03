@@ -1,0 +1,20 @@
+{% assign current_categories = page.categories %}
+{% assign current_depth = current_categories | size %}
+
+{% assign docs = site.mi | where_exp: "doc", "doc.sidebar.nav == 'category-nav'" %}
+{% assign docs = docs | sort: "title" %}
+
+<ul>
+  {% for doc in docs %}
+    {% assign cat = doc.categories %}
+    {% if cat contains current_categories[0] %}
+      {% if current_depth == 1 or cat contains current_categories[1] %}
+        {% unless doc.url contains 'index' %}
+          <li{% if doc.url == page.url %} class="active"{% endif %}>
+            <a href="{{ doc.url }}">{{ doc.title }}</a>
+          </li>
+        {% endunless %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>
