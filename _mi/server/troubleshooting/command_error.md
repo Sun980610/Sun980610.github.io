@@ -2,7 +2,8 @@
 title: "명령어 작동 문제"
 layout: single
 sidebar:
-  nav: "category-nav"
+  nav: "custom-sidebar"
+permalink: /mi/server/troubleshooting/command-error/
 categories:
   - server
   - troubleshooting
