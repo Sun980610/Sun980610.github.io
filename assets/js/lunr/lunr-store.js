@@ -8,7 +8,7 @@ var store = [{
         "title": "본체 부팅 오류",
         "excerpt":"서버 전원을 켰을 때 운영체제가 정상적으로 부팅되지 않거나, 부팅 도중 멈추는 경우가 발생할 수 있습니다. 원인 커널 업데이트 후 충돌 발생 부팅 로더(GRUB) 설정 오류 파일 시스템 손상 하드웨어 문제 (디스크, 메모리 등) 바이러스 또는 악성 코드 감염 증상 유형 GRUB 화면에서 멈춤 또는 부팅 항목 없음 “kernel panic” 메시지...","categories": ["server","troubleshooting"],
         "tags": [],
-        "url": "/mi/server/troubleshooting/booting_error/",
+        "url": "/mi/server/troubleshooting/booting-error/",
         "teaser": null
       },{
         "title": "명령어 작동 문제",
