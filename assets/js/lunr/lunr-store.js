@@ -115,7 +115,4 @@ var store = [{
   },{
     "title": "SUN 글 모음",
     "excerpt":" ","url": "/SUN/"
-  },{
-    "title": "SUN_mi",
-    "excerpt":"SUN PARK   Mucosal Immunology  ","url": "/"
   }]
