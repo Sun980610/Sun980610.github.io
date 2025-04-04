@@ -150,7 +150,7 @@ var store = [{
     "excerpt":" ","url": "/categories/"
   },{
     "title": "Category",
-    "excerpt":" Server Configuration           Server Setup        User Management        Troubleshooting🤬      Bio-informatics           Background        Microbiome Analysis        Multi-omics Integration      Statistical Analysis           Background        Basic R        Microbiome R        Metabolites R        etc      SUN           Travel      ","url": "/category_list/"
+    "excerpt":" Server Configuration           💻Server Setup💻        🙋‍♂️User Management🙋‍♂️        🤬Troubleshooting🤬      Bio-informatics           📖Background📖        🩺Microbiome Analysis🩺        🔗Multi-omics Integration🔗      Statistical Analysis           📖Background📖        📕Basic R📕        📘Microbiome R📘        📙Metabolites R📙        📚etc📚      SUN           ✈️Travel✈️      ","url": "/category_list/"
   },{
     "title": "travel",
     "excerpt":"travel   my own page  ","url": "/SUN/travel/"
