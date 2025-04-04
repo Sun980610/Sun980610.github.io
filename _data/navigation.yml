@@ -18,7 +18,7 @@ category-nav:
         url: /mi/server/setup/
       - title: "User Management"
         url: /mi/server/user/
-      - title: "Troubleshooting"
+      - title: "Troubleshooting🤬"
         url: /mi/server/troubleshooting/
   - title: "Bio-informatics"
     children:
