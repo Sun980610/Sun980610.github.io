@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>  SSH 설치 - SUN_mi</title>
-<meta name="description" content="SSH (Secure Shell)    서버에 원격으로 안전하게 접속할 수 있게 해주는 프로토콜   터미널 환경에서 다른 컴퓨터로 접속하여 명령어를 실행할 수 있음">
+<!-- begin _includes/seo.html --><title>  User Group 설정 및 변경 - SUN_mi</title>
+<meta name="description" content="Group">
 
 
   <meta name="author" content="SUN PARK">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SUN_mi">
-<meta property="og:title" content="  SSH 설치">
-<meta property="og:url" content="/mi/server/setup/SSH_installation/">
+<meta property="og:title" content="  User Group 설정 및 변경">
+<meta property="og:url" content="/mi/server/user/user_group/">
 
 
-  <meta property="og:description" content="SSH (Secure Shell)    서버에 원격으로 안전하게 접속할 수 있게 해주는 프로토콜   터미널 환경에서 다른 컴퓨터로 접속하여 명령어를 실행할 수 있음">
+  <meta property="og:description" content="Group">
 
 
 
@@ -46,7 +46,7 @@
   
 
 
-<link rel="canonical" href="/mi/server/setup/SSH_installation/">
+<link rel="canonical" href="/mi/server/user/user_group/">
 
 
 
@@ -181,9 +181,73 @@
       
         <li>
           
-            <a href="/docs/"><span class="nav__sub-title">Documentation</span></a>
+            <span class="nav__sub-title">Server Configuration</span>
           
 
+          
+          <ul>
+            
+              <li><a href="/mi/server/setup/">Server Setup</a></li>
+            
+              <li><a href="/mi/server/user/">User Management</a></li>
+            
+              <li><a href="/mi/server/troubleshooting/">Troubleshooting</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Bio-informatics</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/informatics/background/">Background</a></li>
+            
+              <li><a href="/mi/informatics/microbiome/">Microbiome Analysis</a></li>
+            
+              <li><a href="/mi/informatics/multiomics/">Multi-omics Integration</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Statistical Analysis</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mi/statistics/background/">Background</a></li>
+            
+              <li><a href="/mi/statistics/basicR/">Basic R</a></li>
+            
+              <li><a href="/mi/statistics/microbiomeR/">Microbiome R</a></li>
+            
+              <li><a href="/mi/statistics/metabolitesR/">Metabolites R</a></li>
+            
+              <li><a href="/mi/statistics/etc/">etc</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">SUN</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/sun/travel/">Travel</a></li>
+            
+          </ul>
           
         </li>
       
@@ -198,8 +262,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="  SSH 설치">
-    <meta itemprop="description" content="SSH (Secure Shell)  서버에 원격으로 안전하게 접속할 수 있게 해주는 프로토콜  터미널 환경에서 다른 컴퓨터로 접속하여 명령어를 실행할 수 있음">
+    <meta itemprop="headline" content="  User Group 설정 및 변경">
+    <meta itemprop="description" content="Group">
     
     
 
@@ -207,8 +271,8 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="/mi/server/setup/SSH_installation/" itemprop="url"><ol>
-  <li>SSH 설치</li>
+            <a href="/mi/server/user/user_group/" itemprop="url"><ol>
+  <li>User Group 설정 및 변경</li>
 </ol>
 </a>
           </h1>
@@ -220,69 +284,43 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="ssh-secure-shell">SSH (Secure Shell)</h2>
+        <h2 id="group">Group</h2>
+
 <ul>
-  <li>서버에 원격으로 안전하게 접속할 수 있게 해주는 프로토콜</li>
-  <li>터미널 환경에서 다른 컴퓨터로 접속하여 명령어를 실행할 수 있음</li>
+  <li>시스템 보안 유지 및 작업 환경 분리를 위한 최소 단위</li>
+  <li>개별 사용자에게 그룹을 부여해 특정 디렉터리/파일 접근, 소프트웨어 실행 권한 등을 그룹 단위로 제어</li>
 </ul>
 
-<h2 id="설치-방법">설치 방법</h2>
+<h2 id="개별-그룹-권한-설정">개별 그룹 권한 설정</h2>
 
 <ul>
-  <li>Ubuntu는 기본적으로 SSH 클라이언트가 설치되어 있으며, 서버로 접근받기 위해서는 ‘openssh-server` 패키지가 필요
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>apt update
-   <span class="nb">sudo </span>apt <span class="nb">install </span>openssh-server
+  <li>그룹 리스트 확인
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">cut</span> <span class="nt">-d</span>: <span class="nt">-f1</span> /etc/group
 </code></pre></div>    </div>
   </li>
-  <li>설치 확인
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl status ssh
+  <li>현재 유저<code class="language-plaintext highlighter-rouge">student</code>의 그룹 확인
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">groups </span>student
+   <span class="c">#또는</span>
+   <span class="nb">id </span>student
 </code></pre></div>    </div>
   </li>
-  <li>상태가 <code class="language-plaintext highlighter-rouge">active (running)</code>이면 SSH 서버가 정상 작동 중</li>
-  <li>비활성화된 경우 다음 명령으로 시작
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>systemctl start ssh
+  <li>그룹 리스트에 <code class="language-plaintext highlighter-rouge">researcher</code> 추가
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>groupadd researcher
+</code></pre></div>    </div>
+  </li>
+  <li>기존 사용자 <code class="language-plaintext highlighter-rouge">student</code>를 <code class="language-plaintext highlighter-rouge">researcher</code> 그룹에 보조그룹으로 추가
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>usermod <span class="nt">-aG</span> researcher student
+</code></pre></div>    </div>
+  </li>
+  <li>사용자 <code class="language-plaintext highlighter-rouge">student</code>의 기본 그룹을 <code class="language-plaintext highlighter-rouge">newgroup</code>으로 변경
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>usermod <span class="nt">-g</span> newgroup student
+</code></pre></div>    </div>
+  </li>
+  <li>사용자 <code class="language-plaintext highlighter-rouge">student</code>의 <code class="language-plaintext highlighter-rouge">sudo</code> 권한 제거
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>deluser student <span class="nb">sudo</span>
 </code></pre></div>    </div>
   </li>
 </ul>
-
-<h2 id="ssh-기본-포트-개방">SSH 기본 포트 개방</h2>
-
-<p>이전 포스트에서 포트 2025로 변경. 설정을 이미 변경했을 시 해당 부분은 넘어감</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>ufw delete allow 22
-   <span class="nb">sudo </span>ufw allow 2025/tcp
-   <span class="nb">sudo </span>ufw reload
-</code></pre></div></div>
-
-<h2 id="ssh-접속-방법">SSH 접속 방법</h2>
-
-<ul>
-  <li>클라이언트 컴퓨터에서 아래와 같이 입력하여 서버에 접속 가능</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   ssh 사용자이름@서버_IP <span class="nt">-p</span> 2025
-</code></pre></div></div>
-
-<ul>
-  <li>처음 접속 시에는 “Are you sure you want to continue connecting?” 메시지가 출력. Y 입력</li>
-</ul>
-
-<h2 id="접속-확인-및-서비스-자동-시작-설정">접속 확인 및 서비스 자동 시작 설정</h2>
-
-<ul>
-  <li>시스템 부팅 시 자동으로 시작되도록 설정</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>systemctl <span class="nb">enable </span>ssh
-</code></pre></div></div>
-
-<h2 id="접속-어플리케이션">접속 어플리케이션</h2>
-
-<ul>
-  <li>Termius, PuTTY, MobaXterm 추천</li>
-</ul>
-
-<h3 id="출처">출처</h3>
 
         
       </section>
@@ -303,7 +341,7 @@
     
       <a href="/categories/#server" class="page__taxonomy-item p-category" rel="tag">server</a><span class="sep">, </span>
     
-      <a href="/categories/#setup" class="page__taxonomy-item p-category" rel="tag">setup</a>
+      <a href="/categories/#user" class="page__taxonomy-item p-category" rel="tag">user</a>
     
     </span>
   </p>
@@ -318,10 +356,10 @@
       
   <nav class="pagination">
     
-      <a href="/mi/informatics/multiomics/" class="pagination--pager" title="Bio-informatics Multi-omics Integration">이전</a>
+      <a href="/mi/server/user/" class="pagination--pager" title="Server User Management">이전</a>
     
     
-      <a href="/mi/server/setup/conda_installation/" class="pagination--pager" title="Conda 설치">다음</a>
+      <a href="/mi/server/user/usermod_userdel/" class="pagination--pager" title="user 설정 변경">다음</a>
     
   </nav>
 

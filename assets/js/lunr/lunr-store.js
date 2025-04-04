@@ -96,9 +96,15 @@ var store = [{
         "teaser": null
       },{
         "title": "Server User Management",
-        "excerpt":"                01. 사용자 추가                    02. user 설정 변경          ","categories": [],
+        "excerpt":"                01. 사용자 추가                    02. user 설정 변경                    03. User Group 설정 및 변경          ","categories": [],
         "tags": [],
         "url": "/mi/server/user/",
+        "teaser": null
+      },{
+        "title": "03. User Group 설정 및 변경",
+        "excerpt":"Group 시스템 보안 유지 및 작업 환경 분리를 위한 최소 단위 개별 사용자에게 그룹을 부여해 특정 디렉터리/파일 접근, 소프트웨어 실행 권한 등을 그룹 단위로 제어 개별 그룹 권한 설정 그룹 리스트 확인 cut -d: -f1 /etc/group 현재 유저student의 그룹 확인 groups student #또는 id student 그룹 리스트에 researcher 추가 sudo...","categories": ["server","user"],
+        "tags": [],
+        "url": "/mi/server/user/user_group/",
         "teaser": null
       },{
         "title": "02. user 설정 변경",
