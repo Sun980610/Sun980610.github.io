@@ -45,6 +45,9 @@ sudo adduser newuser
 - `adduser` 사용시 `/home/username` 자동 생성 가능
 
 
+## 결론 -> adduser 추천
+
+
 
 ### 출처
 
