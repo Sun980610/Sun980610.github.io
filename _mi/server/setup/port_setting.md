@@ -7,6 +7,7 @@ permalink: /mi/server/setup/port_setting/
 categories:
   - server
   - setup
+order: 3
 ---
 
 
