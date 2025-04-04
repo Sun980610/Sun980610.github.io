@@ -7,6 +7,7 @@ permalink: /mi/server/setup/SSH_installation/
 categories:
   - server
   - setup
+order: 4
 ---
 
 
