@@ -11,7 +11,7 @@ permalink: /mi/informatics/background/
 {% assign sorted_docs = docs2 | sort: "title" %}
 
 <ul>
-  {% for doc in sorted_docs2 %}
+  {% for doc in sorted_docs %}
     {% unless doc.url contains 'index' %}
       <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
     {% endunless %}
