@@ -1,6 +1,6 @@
 
 ---
-title: "Conda Installation"
+title: "02. Conda Installation"
 layout: single
 sidebar:
   nav: "custom-sidebar"
