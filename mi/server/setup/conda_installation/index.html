@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>  Ubuntu installation - SUN_mi</title>
-<meta name="description" content="Linux">
+<!-- begin _includes/seo.html --><title>  Conda Installation - SUN_mi</title>
+<meta name="description" content="Conda    소프트웨어 패키지와 환경을 효율적으로 관리할 수 있도록 도와주는 오픈소스 툴   많은 분석 툴이 서로 다른 의존성을 요구하는 경우가 많기 때문에 독립적인 가상 환경을 생성할 수 있는 Conda가 분석 재현성과 환경 격리를 위한 필수 도구">
 
 
   <meta name="author" content="SUN PARK">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SUN_mi">
-<meta property="og:title" content="  Ubuntu installation">
-<meta property="og:url" content="/mi/server/setup/Ubuntu/">
+<meta property="og:title" content="  Conda Installation">
+<meta property="og:url" content="/mi/server/setup/conda_installation/">
 
 
-  <meta property="og:description" content="Linux">
+  <meta property="og:description" content="Conda    소프트웨어 패키지와 환경을 효율적으로 관리할 수 있도록 도와주는 오픈소스 툴   많은 분석 툴이 서로 다른 의존성을 요구하는 경우가 많기 때문에 독립적인 가상 환경을 생성할 수 있는 Conda가 분석 재현성과 환경 격리를 위한 필수 도구">
 
 
 
@@ -46,7 +46,7 @@
   
 
 
-<link rel="canonical" href="/mi/server/setup/Ubuntu/">
+<link rel="canonical" href="/mi/server/setup/conda_installation/">
 
 
 
@@ -198,8 +198,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="  Ubuntu installation">
-    <meta itemprop="description" content="Linux">
+    <meta itemprop="headline" content="  Conda Installation">
+    <meta itemprop="description" content="Conda  소프트웨어 패키지와 환경을 효율적으로 관리할 수 있도록 도와주는 오픈소스 툴  많은 분석 툴이 서로 다른 의존성을 요구하는 경우가 많기 때문에 독립적인 가상 환경을 생성할 수 있는 Conda가 분석 재현성과 환경 격리를 위한 필수 도구">
     
     
 
@@ -207,8 +207,8 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="/mi/server/setup/Ubuntu/" itemprop="url"><ol>
-  <li>Ubuntu installation</li>
+            <a href="/mi/server/setup/conda_installation/" itemprop="url"><ol>
+  <li>Conda Installation</li>
 </ol>
 </a>
           </h1>
@@ -220,90 +220,87 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="linux">Linux</h2>
+        <h2 id="conda">Conda</h2>
+<ul>
+  <li>소프트웨어 패키지와 환경을 효율적으로 관리할 수 있도록 도와주는 오픈소스 툴</li>
+  <li>많은 분석 툴이 서로 다른 의존성을 요구하는 경우가 많기 때문에 독립적인 가상 환경을 생성할 수 있는 Conda가 분석 재현성과 환경 격리를 위한 필수 도구</li>
+</ul>
+
+<h2 id="conda-사용-예시">Conda 사용 예시</h2>
+<ul>
+  <li>QIIME2 분석 환경 구성 (특정 Python 버전 및 패키지 종속성)</li>
+  <li>HUMAnN, MetaPhlAn 등의 Bioconda 패키지 설치</li>
+  <li>실습용 가상 환경을 만들어 도구 업데이트 전 테스트 수행</li>
+</ul>
+
+<h2 id="miniconda-vs-anaconda">Miniconda vs Anaconda**</h2>
+<ul>
+  <li><strong>Anaconda</strong>는 과학 계산용 패키지가 모두 포함된 대용량 배포판</li>
+  <li><strong>Miniconda</strong>는 최소한의 Conda 환경만 포함된 경량 배포판 (추천)</li>
+</ul>
+
+<h2 id="miniconda-설치-방법-ubuntu-기준">Miniconda 설치 방법 (Ubuntu 기준)</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 설치 경로 생성</span>
+   <span class="nb">mkdir</span> <span class="nt">-p</span> ~/miniconda3
+
+   <span class="c"># Miniconda 설치 스크립트 다운로드</span>
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="nt">-O</span> ~/miniconda3/miniconda.sh
+
+   <span class="c"># 실행 권한 부여</span>
+   <span class="nb">chmod</span> +x Miniconda3-latest-Linux-x86_64.sh
+
+   <span class="c"># 설치 실행</span>
+   bash ~/miniconda3/miniconda.sh <span class="nt">-b</span> <span class="nt">-u</span> <span class="nt">-p</span> ~/miniconda3
+
+   <span class="c"># 안내에 따라 설치 진행 후, shell 재시작 또는 아래 명령 실행</span>
+   <span class="nb">source</span> ~/.bashrc
+
+   <span class="c"># 잔여 파일 삭제</span>
+   <span class="nb">rm</span> ~/miniconda3/miniconda.sh
+</code></pre></div></div>
+
+<h2 id="conda-기본-사용법">Conda 기본 사용법</h2>
 
 <ul>
-  <li>UNIX 기반 오픈소스 운영체제 커널. 다양한 배포판(distribution)을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용</li>
-  <li>안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용</li>
-  <li>상세 특징
-    <ul>
-      <li>커널 중심 구조: 하드웨어와 직접적으로 소통하며, 안정성과 성능이 뛰어남</li>
-      <li>오픈소스: 누구나 자유롭게 소스 코드 수정 및 배포 가능</li>
-      <li>멀티유저 / 멀티태스킹 지원</li>
-      <li>다양한 배포판 존재</li>
-    </ul>
+  <li>환경 생성
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> test-env <span class="nv">python</span><span class="o">=</span>3.8
+conda activate test-env
+</code></pre></div>    </div>
+  </li>
+  <li>패키지 설치
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> numpy pandas
+</code></pre></div>    </div>
+  </li>
+  <li>환경 목록 확인 / 삭제
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">env </span>list
+conda remove <span class="nt">-n</span> test-env <span class="nt">--all</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
-<h2 id="ubuntu">Ubuntu</h2>
+<h2 id="conda-환경-점검-항목-주기적으로-체크">Conda 환경 점검 항목 (주기적으로 체크)</h2>
 
 <ul>
-  <li>Debian GNU/Linux를 기반으로 한 대표적인 Linux 배포판 중 하나로, 사용자의 접근성과 편의성을 높이기 위해 개발</li>
-  <li>데스크탑 및 서버 환경 모두 지원하며, 장기 지원(LTS) 버전은 안정성이 검증되어 연구 환경에서 많이 활용</li>
-  <li>생물정보학에서 자주 사용되는 패키지 및 의존성 호환성이 우수하여 분석 환경 구축에 적합</li>
-  <li>상세 특징
-    <ul>
-      <li>APT 패키지 시스템: 소프트웨어 설치 및 관리 용이</li>
-      <li>사용자 친화적 인터페이스: GUI, CLI 모두 활용 가능</li>
-    </ul>
+  <li>Conda 자체 업데이트
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda update conda
+</code></pre></div>    </div>
   </li>
-</ul>
-
-<h2 id="분석을-위해-꼭-linux를-설치해야하는가">분석을 위해 꼭 Linux를 설치해야하는가?</h2>
-
-<ul>
-  <li>생물정보학 도구들은 대부분 Linux 환경에서 실행되는 것을 전제로 함 –&gt; Debian 계열 Ubuntu, Red Hat 계열(CentOS, Rocky Linux)이나 Arch 기반에서도 사용 가능</li>
-  <li>Linux 단일 설치 이외의 선택지
-    <ul>
-      <li>WSL2 기반 Ubuntu: Windows 사용자도 리눅스 환경을 병렬적으로 사용 가능</li>
-      <li>컨테이너사용: Docker, Singularity 이용</li>
-      <li>클라우드 환경: 기업체 등에서 제공하는 이미지를 기반으로 분석 환경 구성 가능</li>
-    </ul>
+  <li>패키지 업데이트
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda update <span class="nt">--all</span>
+</code></pre></div>    </div>
   </li>
-  <li>Ubuntu 사용시 장점
-    <ul>
-      <li>패키지 관리 용이: APT 기반의 <code class="language-plaintext highlighter-rouge">apt-get</code>, <code class="language-plaintext highlighter-rouge">dpkg</code> 등이 직관적이고 빠름</li>
-      <li>커뮤니티 규모: 오류 발생 시 해결 자료가 풍부함</li>
-      <li>LTS 버전의 안정성: 5년 지원으로 서버 환경에 적합함</li>
-      <li>튜토리얼과 도구 호환성: 대부분의 바이오인포매틱스 공식 설치 가이드가 Ubuntu를 기준으로 설명됨</li>
-    </ul>
+  <li>캐시 파일 정리
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda clean <span class="nt">--all</span>
+</code></pre></div>    </div>
   </li>
-</ul>
-
-<h2 id="설치-과정">설치 과정</h2>
-
-<p><strong>(1) ISO 파일 다운로드</strong></p>
-<ul>
-  <li><a href="https://ubuntu.com/download">https://ubuntu.com/download</a> 에서 LTS 버전 ISO 파일 다운로드</li>
-  <li>서버 용도: Ubuntu Server</li>
-  <li>GUI 포함: Ubuntu Desktop</li>
-</ul>
-
-<p><strong>(2) 부팅 USB 생성</strong></p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">balenaEtcher</code>, <code class="language-plaintext highlighter-rouge">Rufus</code>, <code class="language-plaintext highlighter-rouge">UNetbootin</code> 등의 툴 사용</li>
-  <li>ISO 파일을 USB에 기록하여 부팅 가능하도록 설정</li>
-</ul>
-
-<p><strong>(3) 부팅 및 설치</strong></p>
-<ul>
-  <li>USB를 연결한 상태에서 BIOS 부팅 순서를 USB로 변경</li>
-  <li>Ubuntu 설치 진행: 언어 선택 → 디스크 파티션 설정 → 사용자 계정 생성</li>
-</ul>
-
-<p><strong>(4) 설치 후 초기 설정</strong></p>
-<ul>
-  <li>필수 패키지 설치 (예: <code class="language-plaintext highlighter-rouge">build-essential</code>, <code class="language-plaintext highlighter-rouge">curl</code>, <code class="language-plaintext highlighter-rouge">git</code>, <code class="language-plaintext highlighter-rouge">vim</code>)</li>
-  <li>SSH 설정 및 방화벽 설정 (서버용의 경우)</li>
-  <li><code class="language-plaintext highlighter-rouge">apt update &amp;&amp; apt upgrade</code> 명령어로 최신 상태로 업데이트</li>
-  <li>Conda, Docker, Git 등의 환경 구성</li>
 </ul>
 
 <h3 id="출처">출처</h3>
 <ul>
-  <li>Rufus: <a href="https://rufus.ie/en/">https://rufus.ie/en/</a></li>
-  <li>Ubuntu: <a href="https://ubuntu.com/download">https://ubuntu.com/download</a></li>
-  <li>Conda: <a href="https://anaconda.org/anaconda/conda">https://anaconda.org/anaconda/conda</a></li>
+  <li>Conda: <a href="https://docs.conda.io">https://docs.conda.io</a></li>
+  <li>Miniconda: <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></li>
+  <li>Bioconda: <a href="https://bioconda.github.io">https://bioconda.github.io</a></li>
 </ul>
 
         
@@ -340,10 +337,10 @@
       
   <nav class="pagination">
     
-      <a href="/mi/server/setup/" class="pagination--pager" title="Server Setup">이전</a>
+      <a href="/mi/informatics/multiomics/" class="pagination--pager" title="Bio-informatics Multi-omics Integration">이전</a>
     
     
-      <a href="/mi/server/troubleshooting/SSH-error/" class="pagination--pager" title="외부에서 서버 접근 불가">다음</a>
+      <a href="/mi/server/setup/" class="pagination--pager" title="Server Setup">다음</a>
     
   </nav>
 
