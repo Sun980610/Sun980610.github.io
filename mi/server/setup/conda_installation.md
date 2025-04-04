@@ -29,20 +29,23 @@ categories:
 ## Miniconda 설치 방법 (Ubuntu 기준)
 
    ```bash
-   # 홈 디렉토리로 이동
-   cd ~
+   # 설치 경로 생성
+   mkdir -p ~/miniconda3
 
    # Miniconda 설치 스크립트 다운로드
-   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 
    # 실행 권한 부여
    chmod +x Miniconda3-latest-Linux-x86_64.sh
 
    # 설치 실행
-   ./Miniconda3-latest-Linux-x86_64.sh
+   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 
    # 안내에 따라 설치 진행 후, shell 재시작 또는 아래 명령 실행
    source ~/.bashrc
+
+   # 잔여 파일 삭제
+   rm ~/miniconda3/miniconda.sh
    ```
 
 
@@ -64,6 +67,20 @@ categories:
      ```
 
 
+## Conda 환경 점검 항목 (주기적으로 체크)
+
+   - Conda 자체 업데이트
+     ```bash
+     conda update conda
+     ```
+   - 패키지 업데이트
+     ```bash
+     conda update --all
+     ```
+   - 캐시 파일 정리
+     ```bash
+     conda clean --all
+     ```
 
 ### 출처  
    - Conda: [https://docs.conda.io](https://docs.conda.io)  
