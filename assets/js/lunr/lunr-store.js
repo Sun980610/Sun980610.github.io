@@ -122,7 +122,7 @@ var store = [{
     "title": "SUN 글 모음",
     "excerpt":" ","url": "/SUN/"
   },{
-    "title": "SUN_mi",
+    "title": "SUN_mucosal_immunology",
     "excerpt":"SUN PARK   Mucosal Immunology  ","url": "/"
   },{
     "title": "Tags",
