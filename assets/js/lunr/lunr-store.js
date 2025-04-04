@@ -17,16 +17,16 @@ var store = [{
         "url": "/mi/informatics/multiomics/",
         "teaser": null
       },{
-        "title": "Ubuntu installation",
-        "excerpt":"Linux UNIX 기반 오픈소스 운영체제 커널. 다양한 배포판(distribution)을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용 안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용 상세 특징 커널 중심 구조: 하드웨어와 직접적으로 소통하며, 안정성과 성능이 뛰어남 오픈소스: 누구나 자유롭게 소스 코드 수정 및 배포 가능 멀티유저 / 멀티태스킹 지원...","categories": ["server","setup"],
-        "tags": [],
-        "url": "/mi/server/setup/Ubuntu/",
-        "teaser": null
-      },{
         "title": "Server Setup",
         "excerpt":"                Ubuntu installation          ","categories": [],
         "tags": [],
         "url": "/mi/server/setup/",
+        "teaser": null
+      },{
+        "title": "Ubuntu installation",
+        "excerpt":"Linux UNIX 기반 오픈소스 운영체제 커널. 다양한 배포판(distribution)을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용 안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용 상세 특징 커널 중심 구조: 하드웨어와 직접적으로 소통하며, 안정성과 성능이 뛰어남 오픈소스: 누구나 자유롭게 소스 코드 수정 및 배포 가능 멀티유저 / 멀티태스킹 지원...","categories": ["server","setup"],
+        "tags": [],
+        "url": "/mi/server/setup/Ubuntu/",
         "teaser": null
       },{
         "title": "외부에서 서버 접근 불가",
