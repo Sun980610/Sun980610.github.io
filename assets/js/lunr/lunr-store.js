@@ -89,16 +89,16 @@ var store = [{
         "url": "/mi/server/troubleshooting/process_stop/",
         "teaser": null
       },{
-        "title": "Server User Management",
-        "excerpt":"                01. 사용자 추가          ","categories": [],
-        "tags": [],
-        "url": "/mi/server/user/",
-        "teaser": null
-      },{
         "title": "01. 사용자 추가",
         "excerpt":"사용자를 분리/추가 하는 이유 보안성 확보 각 사용자는 권한 범위 내에서만 시스템에 접근 가능 시스템 파일이나 다른 사용자 데이터에 무단으로 접근하는 것을 방지 root 제한 등으로 권한 오용 사고 예방 시스템 점유 통제 사용자마다 디스크 사용량, 프로세스 개수, 네트워크 사용량 등 분리해 관리 가능 로그 및 audit 기능 로그인, 명령어...","categories": ["server","user"],
         "tags": [],
         "url": "/mi/server/user/useradd/",
+        "teaser": null
+      },{
+        "title": "Server User Management",
+        "excerpt":"                01. 사용자 추가          ","categories": [],
+        "tags": [],
+        "url": "/mi/server/user/",
         "teaser": null
       },{
         "title": "Statistical Background",
