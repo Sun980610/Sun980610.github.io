@@ -1,5 +1,5 @@
 ---
-title: "01. Ubuntu installation"
+title: "01. Ubuntu 설치"
 layout: single
 sidebar:
   nav: "custom-sidebar"
