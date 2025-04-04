@@ -7,6 +7,7 @@ permalink: /mi/server/setup/Ubuntu/
 categories:
   - server
   - setup
+order: 1
 ---
 
 ## Linux
