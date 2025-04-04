@@ -19,6 +19,7 @@ categories:
   - 멀티유저 / 멀티태스킹 지원
   - 다양한 배포판 존재
 
+
 ## Ubuntu
 
 - Debian GNU/Linux를 기반으로 한 대표적인 Linux 배포판 중 하나로, 사용자의 접근성과 편의성을 높이기 위해 개발
@@ -27,6 +28,7 @@ categories:
 - 상세 특징
   - APT 패키지 시스템: 소프트웨어 설치 및 관리 용이
   - 사용자 친화적 인터페이스: GUI, CLI 모두 활용 가능
+
 
 ## 분석을 위해 꼭 Linux를 설치해야하는가?
 
@@ -40,6 +42,7 @@ categories:
      - 커뮤니티 규모: 오류 발생 시 해결 자료가 풍부함  
      - LTS 버전의 안정성: 5년 지원으로 서버 환경에 적합함  
      - 튜토리얼과 도구 호환성: 대부분의 바이오인포매틱스 공식 설치 가이드가 Ubuntu를 기준으로 설명됨
+
 
 ## 설치 과정  
 
@@ -63,7 +66,8 @@ categories:
    - Conda, Docker, Git 등의 환경 구성
 
 
+
 ### 출처
-  - [https://rufus.ie/en/](https://rufus.ie/en/)
-  - [https://ubuntu.com/download](https://ubuntu.com/download)
-  - [https://anaconda.org/anaconda/conda](https://anaconda.org/anaconda/conda)
+  - Rufus: [https://rufus.ie/en/](https://rufus.ie/en/)
+  - Ubuntu: [https://ubuntu.com/download](https://ubuntu.com/download)
+  - Conda: [https://anaconda.org/anaconda/conda](https://anaconda.org/anaconda/conda)
