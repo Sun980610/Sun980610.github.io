@@ -1,4 +1,3 @@
-
 ---
 title: "02. Conda Installation"
 layout: single
@@ -9,6 +8,7 @@ categories:
   - server
   - setup
 ---
+
 
 ## Conda
   - 소프트웨어 패키지와 환경을 효율적으로 관리할 수 있도록 도와주는 오픈소스 툴
