@@ -17,6 +17,12 @@ var store = [{
         "url": "/mi/informatics/multiomics/",
         "teaser": null
       },{
+        "title": "04. SSH 설치",
+        "excerpt":"SSH (Secure Shell) 서버에 원격으로 안전하게 접속할 수 있게 해주는 프로토콜 터미널 환경에서 다른 컴퓨터로 접속하여 명령어를 실행할 수 있음 설치 방법 Ubuntu는 기본적으로 SSH 클라이언트가 설치되어 있으며, 서버로 접근받기 위해서는 ‘openssh-server` 패키지가 필요 sudo apt update sudo apt install openssh-server 설치 확인 systemctl status ssh 상태가 active (running)이면 SSH...","categories": ["server","setup"],
+        "tags": [],
+        "url": "/mi/server/setup/SSH_installation/",
+        "teaser": null
+      },{
         "title": "02. Conda 설치",
         "excerpt":"Conda 소프트웨어 패키지와 환경을 효율적으로 관리할 수 있도록 도와주는 오픈소스 툴 많은 분석 툴이 서로 다른 의존성을 요구하는 경우가 많기 때문에 독립적인 가상 환경을 생성할 수 있는 Conda가 분석 재현성과 환경 격리를 위한 필수 도구 Conda 사용 예시 QIIME2 분석 환경 구성 (특정 Python 버전 및 패키지 종속성) HUMAnN, MetaPhlAn...","categories": ["server","setup"],
         "tags": [],
@@ -24,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Server Setup",
-        "excerpt":"                02. Conda 설치                    03. 포트 설정 방법                    01. Ubuntu 설치          ","categories": [],
+        "excerpt":"                04. SSH 설치                    02. Conda 설치                    03. 포트 설정 방법                    01. Ubuntu 설치          ","categories": [],
         "tags": [],
         "url": "/mi/server/setup/",
         "teaser": null
