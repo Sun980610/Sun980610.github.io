@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Server Setup",
-        "excerpt":"      ","categories": [],
+        "excerpt":"                01. Ubuntu 설치                    02. Conda 설치                    03. 포트 설정 방법                    04. SSH 설치          ","categories": [],
         "tags": [],
         "url": "/mi/server/setup/",
         "teaser": null
