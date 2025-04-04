@@ -14,35 +14,35 @@ main:
 category-nav:
   - title: "Server Configuration"
     children:
-      - title: "Server Setup"
+      - title: "💻Server Setup💻"
         url: /mi/server/setup/
-      - title: "User Management"
+      - title: "🙋‍♂️User Management🙋‍♂️"
         url: /mi/server/user/
-      - title: "Troubleshooting🤬"
+      - title: "🤬Troubleshooting🤬"
         url: /mi/server/troubleshooting/
   - title: "Bio-informatics"
     children:
-      - title: "Background"
+      - title: "📖Background📖"
         url: /mi/informatics/background/
-      - title: "Microbiome Analysis"
+      - title: "🩺Microbiome Analysis🩺"
         url: /mi/informatics/microbiome/
-      - title: "Multi-omics Integration"
+      - title: "🔗Multi-omics Integration🔗"
         url: /mi/informatics/multiomics/
   - title: "Statistical Analysis"
     children:
-      - title: "Background"
+      - title: "📖Background📖"
         url: /mi/statistics/background/
-      - title: "Basic R"
+      - title: "📕Basic R📕"
         url: /mi/statistics/basicR/
-      - title: "Microbiome R"
+      - title: "📘Microbiome R📘"
         url: /mi/statistics/microbiomeR/
-      - title: "Metabolites R"
+      - title: "📙Metabolites R📙"
         url: /mi/statistics/metabolitesR/
-      - title: "etc"
+      - title: "📚etc📚"
         url: /mi/statistics/etc/
   - title: "SUN"
     children:
-      - title: "Travel"
+      - title: "✈️Travel✈️"
         url: /sun/travel/
 
 custom-sidebar:
