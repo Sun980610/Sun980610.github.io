@@ -11,7 +11,7 @@ permalink: /mi/server/setup/
 {% assign sorted_docs = docs2 | sort: "title" %}
 
 <ul>
-  {% for doc in docs2 %}
+  {% for doc in sorted_docs2 %}
     {% unless doc.url contains 'index' %}
       <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
     {% endunless %}
