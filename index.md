@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SUN_mi"
+title: "SUN_mucosal_immunology"
 sidebar:
   nav: "category-nav"
 permalink: /
