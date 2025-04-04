@@ -24,12 +24,12 @@ var store = [{
         "teaser": null
       },{
         "title": "Server Setup",
-        "excerpt":"                02. Conda 설치                    3. 포트 설정 방법                    01. Ubuntu 설치          ","categories": [],
+        "excerpt":"                02. Conda 설치                    03. 포트 설정 방법                    01. Ubuntu 설치          ","categories": [],
         "tags": [],
         "url": "/mi/server/setup/",
         "teaser": null
       },{
-        "title": "3. 포트 설정 방법",
+        "title": "03. 포트 설정 방법",
         "excerpt":"Port 네트워크 통신에서 특정 서비스를 식별하기 위한 논리적 번호 하나의 IP 주소(서버)가 여러 네트워크 서비스를 동시에 제공할 수 있도록 해주며, 각 서비스는 고유한 포트 번호를 통해 식별 서버에서 여러 서비스가 실행 중일 때 동일 포트 사용시 충돌 발생 가능 기본 설정 포트들의 경우 무차별적인 외부 침입 대상으로 특히 SSH 22번은...","categories": ["server","setup"],
         "tags": [],
         "url": "/mi/server/setup/port_setting/",
