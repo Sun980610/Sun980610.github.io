@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Server Troubleshooting - SUN_mi</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>  사용자 추가 - SUN_mi</title>
+<meta name="description" content="사용자를 분리/추가 하는 이유">
 
 
   <meta name="author" content="SUN PARK">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SUN_mi">
-<meta property="og:title" content="Server Troubleshooting">
-<meta property="og:url" content="/mi/server/troubleshooting/">
+<meta property="og:title" content="  사용자 추가">
+<meta property="og:url" content="/mi/server/user/useradd/">
 
 
-  <meta property="og:description" content="">
+  <meta property="og:description" content="사용자를 분리/추가 하는 이유">
 
 
 
@@ -46,7 +46,7 @@
   
 
 
-<link rel="canonical" href="/mi/server/troubleshooting/">
+<link rel="canonical" href="/mi/server/user/useradd/">
 
 
 
@@ -181,73 +181,9 @@
       
         <li>
           
-            <span class="nav__sub-title">Server Configuration</span>
+            <a href="/docs/"><span class="nav__sub-title">Documentation</span></a>
           
 
-          
-          <ul>
-            
-              <li><a href="/mi/server/setup/">Server Setup</a></li>
-            
-              <li><a href="/mi/server/user/">User Management</a></li>
-            
-              <li><a href="/mi/server/troubleshooting/" class="active">Troubleshooting</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <span class="nav__sub-title">Bio-informatics</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/mi/informatics/background/">Background</a></li>
-            
-              <li><a href="/mi/informatics/microbiome/">Microbiome Analysis</a></li>
-            
-              <li><a href="/mi/informatics/multiomics/">Multi-omics Integration</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <span class="nav__sub-title">Statistical Analysis</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/mi/statistics/background/">Background</a></li>
-            
-              <li><a href="/mi/statistics/basicR/">Basic R</a></li>
-            
-              <li><a href="/mi/statistics/microbiomeR/">Microbiome R</a></li>
-            
-              <li><a href="/mi/statistics/metabolitesR/">Metabolites R</a></li>
-            
-              <li><a href="/mi/statistics/etc/">etc</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <span class="nav__sub-title">SUN</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/sun/travel/">Travel</a></li>
-            
-          </ul>
           
         </li>
       
@@ -262,8 +198,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Server Troubleshooting">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="  사용자 추가">
+    <meta itemprop="description" content="사용자를 분리/추가 하는 이유">
     
     
 
@@ -271,7 +207,9 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="/mi/server/troubleshooting/" itemprop="url">Server Troubleshooting
+            <a href="/mi/server/user/useradd/" itemprop="url"><ol>
+  <li>사용자 추가</li>
+</ol>
 </a>
           </h1>
           
@@ -282,34 +220,55 @@
 
       <section class="page__content" itemprop="text">
         
-        
+        <h2 id="사용자를-분리추가-하는-이유">사용자를 분리/추가 하는 이유</h2>
+
 <ul>
-  
-    
-      <li><a href="/mi/server/troubleshooting/SSH-error/">외부에서 서버 접근 불가</a></li>
-    
-  
-    
-      <li><a href="/mi/server/troubleshooting/booting-error/">본체 부팅 오류</a></li>
-    
-  
-    
-      <li><a href="/mi/server/troubleshooting/command-error/">명령어 작동 문제</a></li>
-    
-  
-    
-      <li><a href="/mi/server/troubleshooting/network_error/">네트워크 오류</a></li>
-    
-  
-    
-      <li><a href="/mi/server/troubleshooting/permission/">파일 접근 권한 문제</a></li>
-    
-  
-    
-      <li><a href="/mi/server/troubleshooting/process_stop/">프로세스 중단 문제</a></li>
-    
-  
+  <li>보안성 확보
+    <ul>
+      <li>각 사용자는 권한 범위 내에서만 시스템에 접근 가능</li>
+      <li>시스템 파일이나 다른 사용자 데이터에 무단으로 접근하는 것을 방지</li>
+      <li><code class="language-plaintext highlighter-rouge">root</code> 제한 등으로 권한 오용 사고 예방</li>
+    </ul>
+  </li>
+  <li>시스템 점유 통제
+    <ul>
+      <li>사용자마다 디스크 사용량, 프로세스 개수, 네트워크 사용량 등 분리해 관리 가능</li>
+    </ul>
+  </li>
+  <li>로그 및 audit 기능
+    <ul>
+      <li>로그인, 명령어 실행, 파일 접근 등 이력을 사용자 기준으로 기록해 문제 발생시 추적 가능</li>
+    </ul>
+  </li>
 </ul>
+
+<h2 id="useradd-vs-adduser">useradd vs adduser</h2>
+
+<ul>
+  <li>리눅스 환경에서 사용자를 추가하는 명령어</li>
+  <li><code class="language-plaintext highlighter-rouge">adduser</code>는 <code class="language-plaintext highlighter-rouge">useradd</code>를 wrapping한 Perl 스크립트 형태</li>
+</ul>
+
+<h2 id="useradd-예시">useradd 예시</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>useradd <span class="nt">-m</span> <span class="nt">-s</span> /bin/bash newuser
+   <span class="nb">sudo </span>passwd newuser
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-m</code>: 홈 디렉토리 생성</li>
+  <li><code class="language-plaintext highlighter-rouge">-s</code>: 기본 쉘 지정</li>
+  <li><code class="language-plaintext highlighter-rouge">useradd</code>를 사용할 때 홈 디렉토리를 명시하지 않으면 <code class="language-plaintext highlighter-rouge">/home/username</code>이 생성되지 않음</li>
+</ul>
+
+<h2 id="adduser-예시">adduser 예시</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>adduser newuser
+</code></pre></div></div>
+<ul>
+  <li>명령어 실행 시 홈 디렉토리, UID, GID, 쉘 등을 순차적으로 설정 가능</li>
+  <li><code class="language-plaintext highlighter-rouge">adduser</code> 사용시 <code class="language-plaintext highlighter-rouge">/home/username</code> 자동 생성 가능</li>
+</ul>
+
+<h3 id="출처">출처</h3>
+
 
         
       </section>
@@ -317,6 +276,23 @@
       <footer class="page__meta">
         
         
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#server" class="page__taxonomy-item p-category" rel="tag">server</a><span class="sep">, </span>
+    
+      <a href="/categories/#user" class="page__taxonomy-item p-category" rel="tag">user</a>
+    
+    </span>
+  </p>
 
 
         
@@ -328,10 +304,10 @@
       
   <nav class="pagination">
     
-      <a href="/mi/server/troubleshooting/command-error/" class="pagination--pager" title="명령어 작동 문제">이전</a>
+      <a href="/mi/server/user/" class="pagination--pager" title="Server User Management">이전</a>
     
     
-      <a href="/mi/server/troubleshooting/network_error/" class="pagination--pager" title="네트워크 오류">다음</a>
+      <a href="/mi/statistics/background/" class="pagination--pager" title="Statistical Background">다음</a>
     
   </nav>
 
