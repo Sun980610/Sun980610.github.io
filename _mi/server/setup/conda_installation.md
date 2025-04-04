@@ -7,6 +7,7 @@ permalink: /mi/server/setup/conda_installation/
 categories:
   - server
   - setup
+order: 2
 ---
 
 
