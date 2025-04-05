@@ -342,4 +342,6 @@ defaults:
 
 # Google Search Console
 robots: "index, follow"
+google_analytics: G-VPX0SJGNX6
+
 
