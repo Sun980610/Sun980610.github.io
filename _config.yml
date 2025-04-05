@@ -338,3 +338,8 @@ defaults:
       comments: # true
       share: true
       related: true
+
+
+# Google Search Console
+robots: "index, follow"
+
