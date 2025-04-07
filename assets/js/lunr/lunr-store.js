@@ -29,6 +29,12 @@ var store = [{
         "url": "/mi/server/setup/conda_installation/",
         "teaser": null
       },{
+        "title": "03. 포트 설정 방법",
+        "excerpt":"Port 네트워크 통신에서 특정 서비스를 식별하기 위한 논리적 번호 하나의 IP 주소(서버)가 여러 네트워크 서비스를 동시에 제공할 수 있도록 해주며, 각 서비스는 고유한 포트 번호를 통해 식별 서버에서 여러 서비스가 실행 중일 때 동일 포트 사용시 충돌 발생 가능 기본 설정 포트들의 경우 무차별적인 외부 침입 대상으로 특히 SSH 22번은...","categories": ["server","setup"],
+        "tags": [],
+        "url": "/mi/server/setup/port_setting/",
+        "teaser": null
+      },{
         "title": "04. SSH 설치",
         "excerpt":"SSH (Secure Shell) 서버에 원격으로 안전하게 접속할 수 있게 해주는 프로토콜 터미널 환경에서 다른 컴퓨터로 접속하여 명령어를 실행할 수 있음 설치 방법 Ubuntu는 기본적으로 SSH 클라이언트가 설치되어 있으며, 서버로 접근받기 위해서는 ‘openssh-server` 패키지가 필요 sudo apt update sudo apt install openssh-server 설치 확인 systemctl status ssh 상태가 active (running)이면 SSH...","categories": ["server","setup"],
         "tags": [],
@@ -39,12 +45,6 @@ var store = [{
         "excerpt":"                01. Ubuntu 설치                    02. Conda 설치                    03. 포트 설정 방법                    04. SSH 설치          ","categories": [],
         "tags": [],
         "url": "/mi/server/setup/",
-        "teaser": null
-      },{
-        "title": "03. 포트 설정 방법",
-        "excerpt":"Port 네트워크 통신에서 특정 서비스를 식별하기 위한 논리적 번호 하나의 IP 주소(서버)가 여러 네트워크 서비스를 동시에 제공할 수 있도록 해주며, 각 서비스는 고유한 포트 번호를 통해 식별 서버에서 여러 서비스가 실행 중일 때 동일 포트 사용시 충돌 발생 가능 기본 설정 포트들의 경우 무차별적인 외부 침입 대상으로 특히 SSH 22번은...","categories": ["server","setup"],
-        "tags": [],
-        "url": "/mi/server/setup/port_setting/",
         "teaser": null
       },{
         "title": "외부에서 서버 접근 불가",
