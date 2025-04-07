@@ -8,4 +8,4 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-@import "custom/custom"; //글자 크기 조절
+@import "custom/custom"; //글자 모양 조절
