@@ -1,5 +1,5 @@
 ---
-title: "02. user 설정 변경"
+title: "02. User 설정 변경"
 layout: single
 sidebar:
   nav: "custom-sidebar"
@@ -21,32 +21,32 @@ categories:
 ## usermod
 
 1. 사용자 기본 셸을 /bin/zsh로 변경
-  ```bash
-  sudo usermod -s /bin/zsh username
-  ```
+```bash
+sudo usermod -s /bin/zsh username
+```
 2. 사용자 이름 변경
-  ```bash
-  sudo usermod -l newname oldname
-  ```
+```bash
+sudo usermod -l newname oldname
+```
 3. 사용자 홈 디렉토리 이동 및 내용도 함께 이동
-  ```bash
-  sudo usermod -d /home/newdir -m username
-  ```
+```bash
+sudo usermod -d /home/newdir -m username
+```
 4. 그룹 추가
-  ```bash
-  sudo usermod -aG docker username
-  ```
+```bash
+sudo usermod -aG docker username
+```
 
 ## userdel
   - 사용자 계정만 삭제 (홈 디렉토리는 유지)
-  ```bash
-  sudo userdel username
-  ```
+```bash
+sudo userdel username
+```
 
   - 사용자 계정과 홈 디렉토리 모두 삭제
-  ```bash
-  sudo userdel -r username
-  ```
+```bash
+sudo userdel -r username
+```
 
 
 ## 주의사항
