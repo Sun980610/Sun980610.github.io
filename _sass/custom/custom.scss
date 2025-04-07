@@ -1,58 +1,62 @@
-/* 본문 기본: 11pt = 14.67px */
+/* 본문 전체 */
 body {
   font-size: 14.67px;
   line-height: 1.6;
+  color: #333333;  // 본문 중간 회색
 }
 
 /* 제목 */
 h1 {
-  font-size: 20px;     // 15pt
+  font-size: 20px;       // 15pt
+  color: #222222;
   font-weight: bold;
 }
 h2 {
-  font-size: 17.33px;  // 13pt
+  font-size: 17.33px;    // 13pt
+  color: #2a2a2a;
   font-weight: bold;
 }
 h3 {
-  font-size: 14.67px;  // 11pt
+  font-size: 14.67px;    // 11pt
+  color: #2a2a2a;
   font-weight: bold;
 }
 h4, h5, h6 {
   font-size: 14.67px;
+  color: #2a2a2a;
 }
 
 /* 강조 텍스트 */
 strong, b {
-  font-size: 17.33px;
+  font-size: 17.33px;    // 13pt
+  color: #228B22;        // 초록색 (forest green)
   font-weight: bold;
 }
 
-/* 리스트 (ul/ol) */
-ul, ol {
+/* 리스트 */
+ul, ol, li {
   font-size: 14.67px;
-}
-
-/* 리스트 항목 (li) */
-li {
-  font-size: 14.67px;
+  color: #333333;
 }
 
 /* 코드 블럭 (```) */
 pre, code {
   font-size: 14.67px;
-  background-color: #f9f9f9;
+  color: #1f1f1f;              // 어두운 회색
+  background-color: #f5f5f5;
   padding: 0.5em;
   border-radius: 4px;
   font-family: 'Courier New', monospace;
   overflow-x: auto;
 }
 
-/* 인라인 코드 (`코드`) */
+/* 인라인 코드 */
 code {
   padding: 0.2em 0.4em;
 }
 
-/* 참고/알림 상자 */
+/* 참고 상자, 알림 상자 */
 .notice, .highlight {
   font-size: 17.33px;
+  color: #228B22;
 }
