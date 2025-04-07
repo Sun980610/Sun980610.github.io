@@ -7,13 +7,21 @@ permalink: /mi/server/setup/Ubuntu/
 categories:
   - server
   - setup
-order: 1
 ---
+
+#Ubuntu 개요
+
+## Kernel이란?
+
+- 흔히 접하는 Windows, IOS 등에 해당
+- 공식적인 정의는 "컴퓨터 운영체제에서 핵심이 되는 컴퓨터 프로그램"
+
 
 ## Linux
 
-- UNIX 기반 오픈소스 운영체제 커널. 다양한 배포판(distribution)을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용
-- 안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용
+- UNIX 기반 오픈소스 운영체제 커널
+- 다양한 distribution을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용
+- 안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용이 특징
 - 상세 특징
   - 커널 중심 구조: 하드웨어와 직접적으로 소통하며, 안정성과 성능이 뛰어남
   - 오픈소스: 누구나 자유롭게 소스 코드 수정 및 배포 가능
@@ -33,7 +41,7 @@ order: 1
 
 ## 분석을 위해 꼭 Linux를 설치해야하는가?
 
-  - 생물정보학 도구들은 대부분 Linux 환경에서 실행되는 것을 전제로 함 --> Debian 계열 Ubuntu, Red Hat 계열(CentOS, Rocky Linux)이나 Arch 기반에서도 사용 가능
+  - 생물정보학 도구들은 대부분 Linux 환경에서 실행되는 것을 전제로 함 --> Debian 계열 Ubuntu, Red Hat 계열(CentOS, Rocky Linux)이나 Arch 기반을 추천
   - Linux 단일 설치 이외의 선택지
      - WSL2 기반 Ubuntu: Windows 사용자도 리눅스 환경을 병렬적으로 사용 가능
      - 컨테이너사용: Docker, Singularity 이용 
