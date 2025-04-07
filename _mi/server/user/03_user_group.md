@@ -18,29 +18,34 @@ categories:
 
 ## 개별 그룹 권한 설정
 
-  - 그룹 리스트 확인
+- 그룹 리스트 확인
 ```bash
 cut -d: -f1 /etc/group
 ```
-  - 현재 유저`student`의 그룹 확인
+
+- 현재 유저`student`의 그룹 확인
 ```bash
 groups student
 #또는
 id student
 ```
-  - 그룹 리스트에 `researcher` 추가
+
+- 그룹 리스트에 `researcher` 추가
 ```bash
 sudo groupadd researcher
 ```
-  - 기존 사용자 `student`를 `researcher` 그룹에 보조그룹으로 추가
+
+- 기존 사용자 `student`를 `researcher` 그룹에 보조그룹으로 추가
 ```bash
 sudo usermod -aG researcher student
 ```
-  - 사용자 `student`의 기본 그룹을 `newgroup`으로 변경
+
+- 사용자 `student`의 기본 그룹을 `newgroup`으로 변경
 ```bash
 sudo usermod -g newgroup student
 ```
-  - 사용자 `student`의 `sudo` 권한 제거
+
+- 사용자 `student`의 `sudo` 권한 제거
 ```bash
 sudo deluser student sudo
 ```
