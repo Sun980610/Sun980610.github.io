@@ -35,7 +35,7 @@
 
 
 
-  <meta property="article:published_time" content="2025-04-07T02:38:25+00:00">
+  <meta property="article:published_time" content="2025-04-07T02:40:14+00:00">
 
 
 
@@ -250,40 +250,42 @@
 <h2 id="가장-기본적으로-설정되어-있는-포트-정보들">가장 기본적으로 설정되어 있는 포트 정보들</h2>
 
 <ul>
-  <li>리눅스 서버나 우분투 설치 시, 다음과 같은 포트가 기본적으로 사용</li>
-</ul>
+  <li>
+    <p>리눅스 서버나 우분투 설치 시, 다음과 같은 포트가 기본적으로 사용</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>서비스</th>
-      <th>기본 포트</th>
-      <th>설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>SSH</td>
-      <td>22</td>
-      <td>원격 접속용 서비스</td>
-    </tr>
-    <tr>
-      <td>HTTP</td>
-      <td>80</td>
-      <td>일반 웹 서버</td>
-    </tr>
-    <tr>
-      <td>HTTPS</td>
-      <td>443</td>
-      <td>보안 웹 서버 (SSL/TLS)</td>
-    </tr>
-    <tr>
-      <td>MySQL</td>
-      <td>3306</td>
-      <td>데이터베이스</td>
-    </tr>
-  </tbody>
-</table>
+    <table>
+      <thead>
+        <tr>
+          <th>서비스</th>
+          <th>기본 포트</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SSH</td>
+          <td>22</td>
+          <td>원격 접속용 서비스</td>
+        </tr>
+        <tr>
+          <td>HTTP</td>
+          <td>80</td>
+          <td>일반 웹 서버</td>
+        </tr>
+        <tr>
+          <td>HTTPS</td>
+          <td>443</td>
+          <td>보안 웹 서버 (SSL/TLS)</td>
+        </tr>
+        <tr>
+          <td>MySQL</td>
+          <td>3306</td>
+          <td>데이터베이스</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
 
 <h2 id="ssh-포트-변경-방법">SSH 포트 변경 방법</h2>
 
@@ -294,13 +296,16 @@
   </li>
   <li><code class="language-plaintext highlighter-rouge">Port</code> 항목 수정
     <ul>
-      <li>기존 22포트 주석처리 후 새 포트 입력
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Port 22</span>
-Port 2025
-</code></pre></div>        </div>
-      </li>
+      <li>기존 22포트 주석처리 후 새 포트 입력</li>
     </ul>
   </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Port 22</span>
+Port 2025
+</code></pre></div></div>
+
+<ol>
   <li>설정 적용을 위해 SSH 재시작
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart ssh
 </code></pre></div>    </div>
