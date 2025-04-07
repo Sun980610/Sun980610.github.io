@@ -96,7 +96,7 @@ var store = [{
         "teaser": null
       },{
         "title": "02. User 설정 변경",
-        "excerpt":"usermod와 userdel usermod와 userdel은 리눅스 시스템에서 사용자 계정을 수정하거나 삭제할 때 사용하는 명령어 useradd나 adduser로 사용자를 생성한 이후 필요한 설정을 변경하거나 계정을 정리하는 데 활용 usermod: 기존 사용자 계정의 속성(셸, 그룹, 홈 디렉토리 등)을 변경할 때 사용 userdel: 특정 사용자 계정을 시스템에서 완전히 삭제할 때 사용 usermod 사용자 기본 셸을...","categories": ["server","user"],
+        "excerpt":"usermod와 userdel 사용자 계정을 수정하거나 삭제할 때 사용하는 명령어 useradd나 adduser로 사용자를 생성한 이후 필요한 설정을 변경하거나 계정을 정리하는 데 활용 usermod: 기존 사용자 계정의 속성(셸, 그룹, 홈 디렉토리 등)을 변경할 때 사용 userdel: 특정 사용자 계정을 시스템에서 완전히 삭제할 때 사용 usermod 사용자 기본 셸을 /bin/zsh로 변경 sudo usermod...","categories": ["server","user"],
         "tags": [],
         "url": "/mi/server/user/usermod_userdel/",
         "teaser": null
