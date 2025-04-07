@@ -35,7 +35,7 @@
 
 
 
-  <meta property="article:published_time" content="2025-04-07T02:26:32+00:00">
+  <meta property="article:published_time" content="2025-04-07T02:27:24+00:00">
 
 
 
@@ -313,29 +313,29 @@
 
 <ul>
   <li>그룹 리스트 확인
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">cut</span> <span class="nt">-d</span>: <span class="nt">-f1</span> /etc/group
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cut</span> <span class="nt">-d</span>: <span class="nt">-f1</span> /etc/group
 </code></pre></div>    </div>
   </li>
   <li>현재 유저<code class="language-plaintext highlighter-rouge">student</code>의 그룹 확인
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">groups </span>student
-   <span class="c">#또는</span>
-   <span class="nb">id </span>student
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">groups </span>student
+<span class="c">#또는</span>
+<span class="nb">id </span>student
 </code></pre></div>    </div>
   </li>
   <li>그룹 리스트에 <code class="language-plaintext highlighter-rouge">researcher</code> 추가
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>groupadd researcher
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>groupadd researcher
 </code></pre></div>    </div>
   </li>
   <li>기존 사용자 <code class="language-plaintext highlighter-rouge">student</code>를 <code class="language-plaintext highlighter-rouge">researcher</code> 그룹에 보조그룹으로 추가
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>usermod <span class="nt">-aG</span> researcher student
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>usermod <span class="nt">-aG</span> researcher student
 </code></pre></div>    </div>
   </li>
   <li>사용자 <code class="language-plaintext highlighter-rouge">student</code>의 기본 그룹을 <code class="language-plaintext highlighter-rouge">newgroup</code>으로 변경
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>usermod <span class="nt">-g</span> newgroup student
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>usermod <span class="nt">-g</span> newgroup student
 </code></pre></div>    </div>
   </li>
   <li>사용자 <code class="language-plaintext highlighter-rouge">student</code>의 <code class="language-plaintext highlighter-rouge">sudo</code> 권한 제거
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>deluser student <span class="nb">sudo</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>deluser student <span class="nb">sudo</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -374,10 +374,10 @@
       
   <nav class="pagination">
     
-      <a href="/mi/server/user/" class="pagination--pager" title="Server User Management">이전</a>
+      <a href="/mi/server/user/useradd/" class="pagination--pager" title="사용자 추가">이전</a>
     
     
-      <a href="/mi/server/user/usermod_userdel/" class="pagination--pager" title="user 설정 변경">다음</a>
+      <a href="/mi/server/user/" class="pagination--pager" title="Server User Management">다음</a>
     
   </nav>
 
