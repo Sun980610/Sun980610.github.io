@@ -17,6 +17,12 @@ var store = [{
         "url": "/mi/informatics/multiomics/",
         "teaser": null
       },{
+        "title": "01. Ubuntu 설치",
+        "excerpt":"#Ubuntu 개요 Kernel이란? 흔히 접하는 Windows, IOS 등에 해당 공식적인 정의는 “컴퓨터 운영체제에서 핵심이 되는 컴퓨터 프로그램” Linux UNIX 기반 오픈소스 운영체제 커널 다양한 distribution을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용 안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용이 특징 상세 특징 커널 중심 구조: 하드웨어와...","categories": ["server","setup"],
+        "tags": [],
+        "url": "/mi/server/setup/Ubuntu/",
+        "teaser": null
+      },{
         "title": "04. SSH 설치",
         "excerpt":"SSH (Secure Shell) 서버에 원격으로 안전하게 접속할 수 있게 해주는 프로토콜 터미널 환경에서 다른 컴퓨터로 접속하여 명령어를 실행할 수 있음 설치 방법 Ubuntu는 기본적으로 SSH 클라이언트가 설치되어 있으며, 서버로 접근받기 위해서는 ‘openssh-server` 패키지가 필요 sudo apt update sudo apt install openssh-server 설치 확인 systemctl status ssh 상태가 active (running)이면 SSH...","categories": ["server","setup"],
         "tags": [],
@@ -39,12 +45,6 @@ var store = [{
         "excerpt":"Port 네트워크 통신에서 특정 서비스를 식별하기 위한 논리적 번호 하나의 IP 주소(서버)가 여러 네트워크 서비스를 동시에 제공할 수 있도록 해주며, 각 서비스는 고유한 포트 번호를 통해 식별 서버에서 여러 서비스가 실행 중일 때 동일 포트 사용시 충돌 발생 가능 기본 설정 포트들의 경우 무차별적인 외부 침입 대상으로 특히 SSH 22번은...","categories": ["server","setup"],
         "tags": [],
         "url": "/mi/server/setup/port_setting/",
-        "teaser": null
-      },{
-        "title": "01. Ubuntu 설치",
-        "excerpt":"Linux UNIX 기반 오픈소스 운영체제 커널. 다양한 배포판(distribution)을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용 안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용 상세 특징 커널 중심 구조: 하드웨어와 직접적으로 소통하며, 안정성과 성능이 뛰어남 오픈소스: 누구나 자유롭게 소스 코드 수정 및 배포 가능 멀티유저 / 멀티태스킹 지원...","categories": ["server","setup"],
-        "tags": [],
-        "url": "/mi/server/setup/Ubuntu/",
         "teaser": null
       },{
         "title": "외부에서 서버 접근 불가",
