@@ -39,10 +39,13 @@ ul, ol, li {
   color: #333333;
 }
 
-/* 코드 블럭 공통 배경을 다크 톤으로 */
-.highlight, pre, code {
-  background-color: #1e1e1e;  // 검정에 가까운 다크 그레이
-  color: #f0f0f0;             // 기본 텍스트 색상
+/* 코드 블럭 다크 테마 적용: Rouge 기반 구조 */
+div.highlighter-rouge,
+div.highlight,
+div.highlight pre,
+div.highlight code {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
   font-family: 'Courier New', monospace;
   font-size: 14.67px;
   border-radius: 4px;
@@ -50,9 +53,12 @@ ul, ol, li {
   overflow-x: auto;
 }
 
-/* 인라인 코드 */
+/* 인라인 코드도 다크 톤 */
 code {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
   padding: 0.2em 0.4em;
+  border-radius: 4px;
 }
 
 /* 참고 상자, 알림 상자 */
