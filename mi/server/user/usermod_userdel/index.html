@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>  user 설정 변경 - SUN_mi</title>
+<!-- begin _includes/seo.html --><title>  User 설정 변경 - SUN_mi</title>
 <meta name="description" content="usermod와 userdel">
 
 
@@ -23,7 +23,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SUN_mi">
-<meta property="og:title" content="  user 설정 변경">
+<meta property="og:title" content="  User 설정 변경">
 <meta property="og:url" content="/mi/server/user/usermod_userdel/">
 
 
@@ -35,7 +35,7 @@
 
 
 
-  <meta property="article:published_time" content="2025-04-07T02:27:24+00:00">
+  <meta property="article:published_time" content="2025-04-07T02:28:13+00:00">
 
 
 
@@ -216,7 +216,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="  user 설정 변경">
+    <meta itemprop="headline" content="  User 설정 변경">
     <meta itemprop="description" content="usermod와 userdel">
     
     
@@ -226,7 +226,7 @@
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="/mi/server/user/usermod_userdel/" itemprop="url"><ol>
-  <li>user 설정 변경</li>
+  <li>User 설정 변경</li>
 </ol>
 </a>
           </h1>
@@ -252,19 +252,19 @@
 
 <ol>
   <li>사용자 기본 셸을 /bin/zsh로 변경
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>usermod <span class="nt">-s</span> /bin/zsh username
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>usermod <span class="nt">-s</span> /bin/zsh username
 </code></pre></div>    </div>
   </li>
   <li>사용자 이름 변경
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>usermod <span class="nt">-l</span> newname oldname
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>usermod <span class="nt">-l</span> newname oldname
 </code></pre></div>    </div>
   </li>
   <li>사용자 홈 디렉토리 이동 및 내용도 함께 이동
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>usermod <span class="nt">-d</span> /home/newdir <span class="nt">-m</span> username
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>usermod <span class="nt">-d</span> /home/newdir <span class="nt">-m</span> username
 </code></pre></div>    </div>
   </li>
   <li>그룹 추가
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker username
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker username
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -272,11 +272,11 @@
 <h2 id="userdel">userdel</h2>
 <ul>
   <li>사용자 계정만 삭제 (홈 디렉토리는 유지)
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>userdel username
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>userdel username
 </code></pre></div>    </div>
   </li>
   <li>사용자 계정과 홈 디렉토리 모두 삭제
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>userdel <span class="nt">-r</span> username
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>userdel <span class="nt">-r</span> username
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -323,10 +323,10 @@
       
   <nav class="pagination">
     
-      <a href="/mi/server/user/" class="pagination--pager" title="Server User Management">이전</a>
+      <a href="/mi/server/user/useradd/" class="pagination--pager" title="사용자 추가">이전</a>
     
     
-      <a href="/mi/statistics/background/" class="pagination--pager" title="Statistical Background">다음</a>
+      <a href="/mi/server/user/user_group/" class="pagination--pager" title="User Group 설정 및 변경">다음</a>
     
   </nav>
 
