@@ -28,10 +28,10 @@ categories:
 
 
 ## useradd 예시
-   ```bash
-   sudo useradd -m -s /bin/bash newuser
-   sudo passwd newuser
-   ```
+```bash
+sudo useradd -m -s /bin/bash newuser
+sudo passwd newuser
+```
 - `-m`: 홈 디렉토리 생성
 - `-s`: 기본 쉘 지정
 - `useradd`를 사용할 때 홈 디렉토리를 명시하지 않으면 `/home/username`이 생성되지 않음
