@@ -107,14 +107,14 @@ var store = [{
         "url": "/mi/server/user/user_group/",
         "teaser": null
       },{
-        "title": "03. 파일 접속 권한 설정",
-        "excerpt":"## chmod - 파일이나 디렉토리의 권한을 설정하거나 변경할 때 사용하는 명령어 - 리눅스 시스템에서 각 사용자(user), 그룹(group), 기타(other)에게 읽기(read), 쓰기(write), 실행(execute) 권한을 부여하거나 제한 - 기본적인 사용 방식은 기호 모드(문자 방식)와 숫자 모드(옥텟 방식)으로 나뉨 ## chmod 사용 1. 기호 모드로 실행 권한 추가 (`+x`) ```bash chmod +x script.sh ```...","categories": ["server","user"],
+        "title": "04. 파일 접속 권한 설정",
+        "excerpt":"chmod 파일이나 디렉토리의 권한을 설정하거나 변경할 때 사용하는 명령어 리눅스 시스템에서 각 사용자(user), 그룹(group), 기타(other)에게 읽기(read), 쓰기(write), 실행(execute) 권한을 부여하거나 제한 기본적인 사용 방식은 기호 모드(문자 방식)와 숫자 모드(옥텟 방식)으로 나뉨 chmod 사용 기호 모드로 실행 권한 추가 (+x) chmod +x script.sh 숫자 모드로 권한 일괄 설정 (744: 소유자 읽기/쓰기/실행,...","categories": ["server","user"],
         "tags": [],
         "url": "/mi/server/user/chmod_permission/",
         "teaser": null
       },{
         "title": "Server User Management",
-        "excerpt":"                01. 사용자 추가                    02. User 설정 변경                    03. User Group 설정 및 변경                    03. 파일 접속 권한 설정          ","categories": [],
+        "excerpt":"                01. 사용자 추가                    02. User 설정 변경                    03. User Group 설정 및 변경                    04. 파일 접속 권한 설정          ","categories": [],
         "tags": [],
         "url": "/mi/server/user/",
         "teaser": null
