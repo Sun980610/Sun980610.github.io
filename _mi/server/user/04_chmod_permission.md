@@ -1,5 +1,5 @@
 ---
-title: "03. 파일 접속 권한 설정"
+title: "04. 파일 접속 권한 설정"
 layout: single
 sidebar:
   nav: "custom-sidebar"
