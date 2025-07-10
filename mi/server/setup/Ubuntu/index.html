@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>  Ubuntu 설치 - SUN_mi</title>
-<meta name="description" content="#Ubuntu 개요">
+<!-- begin _includes/seo.html --><title>  계정 생성부터 제한까지 - SUN_mi</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="SUN PARK">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SUN_mi">
-<meta property="og:title" content="  Ubuntu 설치">
+<meta property="og:title" content="  계정 생성부터 제한까지">
 <meta property="og:url" content="/mi/server/setup/Ubuntu/">
 
 
-  <meta property="og:description" content="#Ubuntu 개요">
+  <meta property="og:description" content="">
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-  <meta property="article:published_time" content="2025-05-16T06:35:34+00:00">
+  <meta property="article:published_time" content="2025-07-10T10:09:50+00:00">
 
 
 
@@ -216,8 +216,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="  Ubuntu 설치">
-    <meta itemprop="description" content="#Ubuntu 개요">
+    <meta itemprop="headline" content="  계정 생성부터 제한까지">
+    <meta itemprop="description" content="">
     
     
 
@@ -226,7 +226,7 @@
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="/mi/server/setup/Ubuntu/" itemprop="url"><ol>
-  <li>Ubuntu 설치</li>
+  <li>계정 생성부터 제한까지</li>
 </ol>
 </a>
           </h1>
@@ -238,101 +238,234 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>#Ubuntu 개요</p>
+        ---
 
-<h2 id="kernel이란">Kernel이란?</h2>
+# new_user 계정 생성 및 자원 제한 + 디렉토리 보호 전체 절차
 
-<ul>
-  <li>흔히 접하는 Windows, IOS 등에 해당</li>
-  <li>공식적인 정의는 “컴퓨터 운영체제에서 핵심이 되는 컴퓨터 프로그램”</li>
-</ul>
+---
 
-<h2 id="linux">Linux</h2>
+## 1. 계정 생성 및 권한 제한
 
-<ul>
-  <li>UNIX 기반 오픈소스 운영체제 커널</li>
-  <li>다양한 distribution을 통해 서버, 데스크탑, 임베디드 시스템 등에서 널리 사용</li>
-  <li>안정성, 유연성, 보안성이 뛰어나고 커맨드라인 기반의 운영 환경을 중심 활용이 특징</li>
-  <li>상세 특징
-    <ul>
-      <li>커널 중심 구조: 하드웨어와 직접적으로 소통하며, 안정성과 성능이 뛰어남</li>
-      <li>오픈소스: 누구나 자유롭게 소스 코드 수정 및 배포 가능</li>
-      <li>멀티유저 / 멀티태스킹 지원</li>
-      <li>다양한 배포판 존재</li>
-    </ul>
-  </li>
-</ul>
+```bash
+sudo adduser new_user
+```
 
-<h2 id="ubuntu">Ubuntu</h2>
+* 새 사용자 `new_user` 계정을 생성합니다. 패스워드 입력 시 `0000` 등을 설정할 수 있습니다.
 
-<ul>
-  <li>Debian GNU/Linux를 기반으로 한 대표적인 Linux 배포판 중 하나로, 사용자의 접근성과 편의성을 높이기 위해 개발</li>
-  <li>데스크탑 및 서버 환경 모두 지원하며, 장기 지원(LTS) 버전은 안정성이 검증되어 연구 환경에서 많이 활용</li>
-  <li>생물정보학에서 자주 사용되는 패키지 및 의존성 호환성이 우수하여 분석 환경 구축에 적합</li>
-  <li>상세 특징
-    <ul>
-      <li>APT 패키지 시스템: 소프트웨어 설치 및 관리 용이</li>
-      <li>사용자 친화적 인터페이스: GUI, CLI 모두 활용 가능</li>
-    </ul>
-  </li>
-</ul>
+```bash
+sudo deluser new_user sudo
+```
 
-<h2 id="분석을-위해-꼭-linux를-설치해야하는가">분석을 위해 꼭 Linux를 설치해야하는가?</h2>
+* `new_user` 계정이 관리자(sudoers) 권한을 갖고 있지 않도록 제거합니다.
 
-<ul>
-  <li>생물정보학 도구들은 대부분 Linux 환경에서 실행되는 것을 전제로 함 –&gt; Debian 계열 Ubuntu, Red Hat 계열(CentOS, Rocky Linux)이나 Arch 기반을 추천</li>
-  <li>Linux 단일 설치 이외의 선택지
-    <ul>
-      <li>WSL2 기반 Ubuntu: Windows 사용자도 리눅스 환경을 병렬적으로 사용 가능</li>
-      <li>컨테이너사용: Docker, Singularity 이용</li>
-      <li>클라우드 환경: 기업체 등에서 제공하는 이미지를 기반으로 분석 환경 구성 가능</li>
-    </ul>
-  </li>
-  <li>Ubuntu 사용시 장점
-    <ul>
-      <li>패키지 관리 용이: APT 기반의 <code class="language-plaintext highlighter-rouge">apt-get</code>, <code class="language-plaintext highlighter-rouge">dpkg</code> 등이 직관적이고 빠름</li>
-      <li>커뮤니티 규모: 오류 발생 시 해결 자료가 풍부함</li>
-      <li>LTS 버전의 안정성: 5년 지원으로 서버 환경에 적합함</li>
-      <li>튜토리얼과 도구 호환성: 대부분의 바이오인포매틱스 공식 설치 가이드가 Ubuntu를 기준으로 설명됨</li>
-    </ul>
-  </li>
-</ul>
+---
 
-<h2 id="설치-과정">설치 과정</h2>
+## 2. CPU 사용 제한 설정 (systemd slice 사용)
 
-<p><strong>(1) ISO 파일 다운로드</strong></p>
-<ul>
-  <li><a href="https://ubuntu.com/download">https://ubuntu.com/download</a> 에서 LTS 버전 ISO 파일 다운로드</li>
-  <li>서버 용도: Ubuntu Server</li>
-  <li>GUI 포함: Ubuntu Desktop</li>
-</ul>
+### 2-1. `new_user.slice` 정의 파일 생성
 
-<p><strong>(2) 부팅 USB 생성</strong></p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">balenaEtcher</code>, <code class="language-plaintext highlighter-rouge">Rufus</code>, <code class="language-plaintext highlighter-rouge">UNetbootin</code> 등의 툴 사용</li>
-  <li>ISO 파일을 USB에 기록하여 부팅 가능하도록 설정</li>
-</ul>
+```bash
+sudo mkdir -p /etc/systemd/system/new_user.slice.d
+sudo nano /etc/systemd/system/new_user.slice.d/cpu-limit.conf
+```
 
-<p><strong>(3) 부팅 및 설치</strong></p>
-<ul>
-  <li>USB를 연결한 상태에서 BIOS 부팅 순서를 USB로 변경</li>
-  <li>Ubuntu 설치 진행: 언어 선택 → 디스크 파티션 설정 → 사용자 계정 생성</li>
-</ul>
+* 이 디렉토리는 systemd slice 단위 설정을 담는 위치입니다.
 
-<p><strong>(4) 설치 후 초기 설정</strong></p>
-<ul>
-  <li>필수 패키지 설치 (예: <code class="language-plaintext highlighter-rouge">build-essential</code>, <code class="language-plaintext highlighter-rouge">curl</code>, <code class="language-plaintext highlighter-rouge">git</code>, <code class="language-plaintext highlighter-rouge">vim</code>)</li>
-  <li>SSH 설정 및 방화벽 설정 (서버용의 경우)</li>
-  <li><code class="language-plaintext highlighter-rouge">apt update &amp;&amp; apt upgrade</code> 명령어로 최신 상태로 업데이트</li>
-  <li>Conda, Docker, Git 등의 환경 구성</li>
-</ul>
+```ini
+[Slice]
+CPUQuota=10%
+```
 
-<h3 id="출처">출처</h3>
-<ul>
-  <li>Rufus: <a href="https://rufus.ie/en/">https://rufus.ie/en/</a></li>
-  <li>Ubuntu: <a href="https://ubuntu.com/download">https://ubuntu.com/download</a></li>
-  <li>Conda: <a href="https://anaconda.org/anaconda/conda">https://anaconda.org/anaconda/conda</a></li>
-</ul>
+* `CPUQuota=10%`는 전체 CPU 자원의 10%만 이 slice에 할당하겠다는 의미입니다. (예: 총 32코어라면 3.2 core 사용 가능)
+
+### 2-2. 사용자 세션에 slice 적용
+
+```bash
+sudo mkdir -p /etc/systemd/system/user@.service.d
+sudo nano /etc/systemd/system/user@.service.d/10-new_user-slice.conf
+```
+
+* 사용자 session(service) 단위 설정을 적용할 준비를 합니다.
+
+```ini
+[Service]
+Slice=new_user.slice
+```
+
+* 사용자 세션이 `new_user.slice` 하위에서 실행되도록 지정합니다.
+
+### 2-3. systemd 설정 적용
+
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+```
+
+* systemd가 위 설정들을 인식하도록 재시작 및 재로드합니다.
+
+---
+
+## 3. 홈 디렉토리 보호
+
+```bash
+sudo chmod 700 /home/*
+```
+
+* 모든 기존 홈 디렉토리에 대해 타 사용자가 접근하지 못하도록 권한을 제한합니다. (owner만 접근 가능)
+
+---
+
+## 4. `/shared_laboratory/new_user` 디렉토리 생성 및 기존 데이터 이동
+
+```bash
+sudo mkdir -p /shared_laboratory/new_user
+sudo chown new_user:new_user /shared_laboratory/new_user
+```
+
+* `new_user` 사용자 전용 디렉토리를 만들고 해당 계정에 소유권을 부여합니다.
+
+```bash
+sudo rsync -aXS /home/new_user/ /shared_laboratory/new_user/
+```
+
+* 기존 홈 디렉토리의 모든 파일과 권한 정보를 유지한 채로 새로운 위치로 복사합니다.
+
+```bash
+sudo mv /home/new_user /home/new_user.bak
+```
+
+* 기존 홈 디렉토리를 백업해 보존합니다.
+
+---
+
+## 5. 사용자 홈 디렉토리 경로 변경
+
+```bash
+sudo usermod -d /shared_laboratory/new_user new_user
+```
+
+* `new_user` 계정의 홈 디렉토리 경로를 새로 지정한 `/shared_laboratory/new_user`로 변경합니다.
+
+---
+
+## 6. 디스크 쿼터 설정을 위한 마운트 설정
+
+### 6-1. `/etc/fstab` 수정
+
+```bash
+sudo nano /etc/fstab
+```
+
+다음 줄이 포함되어 있는지 확인하거나 수정합니다:
+
+```
+UUID=c24ce526-8e95-40d6-ad6b-ca7d3badbf32 /shared_laboratory ext4 defaults,usrquota 0 2
+```
+
+* 해당 UUID는 `/dev/sdc2`에 해당합니다. `usrquota`를 지정함으로써 사용자 단위의 쿼터 기능을 활성화합니다.
+
+### 6-2. 마운트 재설정
+
+```bash
+sudo mount -o remount /shared_laboratory
+```
+
+---
+
+## 7. 쿼터 초기화 및 활성화
+
+```bash
+sudo quotacheck -cum /shared_laboratory
+```
+
+* 쿼터 정보를 체크하고 `aquota.user` 파일을 생성합니다.
+
+```bash
+sudo quotaon /shared_laboratory
+```
+
+* 지정된 경로에서 쿼터 기능을 실제로 활성화합니다.
+
+---
+
+## 8. 사용자 쿼터 제한 설정
+
+```bash
+sudo edquota -u new_user
+```
+
+* 에디터가 열리면 다음처럼 수정합니다 (단위: KB):
+
+```
+Filesystem                   blocks     soft     hard
+/dev/sdc2                        0 700000000 700000000
+```
+
+* `700000000 KB` = 약 667GB 정도에 해당합니다. Soft/Hard limit은 같게 설정해도 됩니다.
+
+---
+
+## 9. 디스크 사용량 확인
+
+```bash
+quota -u new_user
+```
+
+* `new_user` 계정의 디스크 사용량 및 제한이 출력됩니다.
+
+또는 전체 사용자 쿼터 보고:
+
+```bash
+sudo repquota /shared_laboratory
+```
+
+---
+
+## 10. `/shared_laboratory` 상위 디렉토리 접근 제한 (ACL 적용)
+
+### 10-1. `/shared_laboratory`의 부모 디렉토리 확인
+
+```bash
+ls -ld /shared_laboratory
+```
+
+→ 대부분 `/` 또는 `/mnt`, `/data` 아래일 수 있습니다.
+
+### 10-2. `new_user` 계정이 `/shared_laboratory`만 접근 가능하도록 ACL 설정
+
+```bash
+sudo setfacl -m u:new_user:0 /       # / 디렉토리에 대한 접근 제거
+sudo setfacl -m u:new_user:rx /shared_laboratory
+sudo setfacl -m u:new_user:rwx /shared_laboratory/new_user
+```
+
+* `/` 에 대한 권한을 제거하여 계정이 상위 경로를 탐색하지 못하도록 합니다.
+* 단, `/shared_laboratory` 및 그 하위 디렉토리는 직접 접근할 수 있어야 하므로 `rx`를 허용합니다.
+* 자기 폴더에는 `rwx` 권한을 줍니다.
+
+### 10-3. 적용 상태 확인
+
+```bash
+getfacl / | grep new_user
+getfacl /shared_laboratory
+```
+
+---
+
+## 참고: ACL 변경이 실시간 작업에 주는 영향
+
+* 파일을 읽거나 쓰고 있는 도중 상위 디렉토리에 ACL 제한을 갑자기 걸면 해당 핸들에 따라 **작업 실패 또는 에러**가 발생할 수 있습니다.
+* 따라서 장시간 다운로드/실행 중인 작업이 있다면 **작업 완료 후 ACL을 적용**하는 것이 안전합니다.
+
+---
+
+이렇게 구성하면 `new_user` 계정은 다음과 같은 환경을 갖습니다:
+
+* 오직 본인의 홈 디렉토리(`/shared_laboratory/new_user`)에만 접근 가능
+* 다른 상위 경로나 시스템 디렉토리 접근 불가
+* 전체 CPU의 10%만 사용 가능
+* 디스크는 약 667GB까지만 사용 가능
+
 
         
       </section>
@@ -368,10 +501,10 @@
       
   <nav class="pagination">
     
-      <a href="/mi/informatics/multiomics/" class="pagination--pager" title="Bio-informatics Multi-omics Integration">이전</a>
+      <a href="/mi/server/setup/SSH_installation/" class="pagination--pager" title="SSH 설치">이전</a>
     
     
-      <a href="/mi/server/setup/conda_installation/" class="pagination--pager" title="Conda 설치">다음</a>
+      <a href="/mi/server/setup/" class="pagination--pager" title="Server Setup">다음</a>
     
   </nav>
 

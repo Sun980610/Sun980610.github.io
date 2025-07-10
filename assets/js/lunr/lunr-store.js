@@ -41,8 +41,14 @@ var store = [{
         "url": "/mi/server/setup/SSH_installation/",
         "teaser": null
       },{
+        "title": "05. 계정 생성부터 제한까지",
+        "excerpt":"--- # new_user 계정 생성 및 자원 제한 + 디렉토리 보호 전체 절차 --- ## 1. 계정 생성 및 권한 제한 ```bash sudo adduser new_user ``` * 새 사용자 `new_user` 계정을 생성합니다. 패스워드 입력 시 `0000` 등을 설정할 수 있습니다. ```bash sudo deluser new_user sudo ``` * `new_user` 계정이 관리자(sudoers)...","categories": ["server","setup"],
+        "tags": [],
+        "url": "/mi/server/setup/Ubuntu/",
+        "teaser": null
+      },{
         "title": "Server Setup",
-        "excerpt":"                01. Ubuntu 설치                    02. Conda 설치                    03. 포트 설정 방법                    04. SSH 설치          ","categories": [],
+        "excerpt":"                01. Ubuntu 설치                    02. Conda 설치                    03. 포트 설정 방법                    04. SSH 설치                    05. 계정 생성부터 제한까지          ","categories": [],
         "tags": [],
         "url": "/mi/server/setup/",
         "teaser": null
